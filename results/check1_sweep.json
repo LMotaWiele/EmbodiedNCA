@@ -1,0 +1,160 @@
+{
+  "selected": {
+    "label": "gen0.2_cons1.0",
+    "gen_rate": 0.2,
+    "consumption_rate": 1.0,
+    "mean": 0.7063649678373242,
+    "stdev": 9.362454339395323e-05,
+    "min": 0.7058064341545105,
+    "max": 0.7064931392669678,
+    "final": 0.7064089179039001,
+    "final_coherence": 0.9467188715934753,
+    "final_self_mass": 91.85530853271484
+  },
+  "sweep": [
+    {
+      "label": "spec_default",
+      "gen_rate": 0.05,
+      "consumption_rate": 0.01,
+      "mean": 0.9989483834583707,
+      "stdev": 2.191405570835209e-05,
+      "min": 0.9988892078399658,
+      "max": 0.9990272521972656,
+      "final": 0.9989491701126099,
+      "final_coherence": 0.9621632695198059,
+      "final_self_mass": 180.25186157226562
+    },
+    {
+      "label": "gen0.2_cons0.2",
+      "gen_rate": 0.2,
+      "consumption_rate": 0.2,
+      "mean": 1.0,
+      "stdev": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "final": 1.0,
+      "final_coherence": 0.9748778343200684,
+      "final_self_mass": 202.38844299316406
+    },
+    {
+      "label": "gen0.2_cons0.5",
+      "gen_rate": 0.2,
+      "consumption_rate": 0.5,
+      "mean": 1.0,
+      "stdev": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "final": 1.0,
+      "final_coherence": 0.9706500172615051,
+      "final_self_mass": 192.08544921875
+    },
+    {
+      "label": "gen0.2_cons1.0",
+      "gen_rate": 0.2,
+      "consumption_rate": 1.0,
+      "mean": 0.7063649678373242,
+      "stdev": 9.362454339395323e-05,
+      "min": 0.7058064341545105,
+      "max": 0.7064931392669678,
+      "final": 0.7064089179039001,
+      "final_coherence": 0.9467188715934753,
+      "final_self_mass": 91.85530853271484
+    },
+    {
+      "label": "gen0.2_cons1.5",
+      "gen_rate": 0.2,
+      "consumption_rate": 1.5,
+      "mean": 0.7244985573773063,
+      "stdev": 5.1345422644983475e-05,
+      "min": 0.7242909073829651,
+      "max": 0.7246849536895752,
+      "final": 0.7244599461555481,
+      "final_coherence": 0.9229597449302673,
+      "final_self_mass": 61.23220443725586
+    },
+    {
+      "label": "gen0.2_cons2.0",
+      "gen_rate": 0.2,
+      "consumption_rate": 2.0,
+      "mean": 0.7464963995878257,
+      "stdev": 5.317116918972484e-05,
+      "min": 0.7463962435722351,
+      "max": 0.7466943264007568,
+      "final": 0.7464523911476135,
+      "final_coherence": 0.8988882899284363,
+      "final_self_mass": 46.40303421020508
+    },
+    {
+      "label": "gen0.2_cons3.0",
+      "gen_rate": 0.2,
+      "consumption_rate": 3.0,
+      "mean": 0.836158474034901,
+      "stdev": 0.0017539975388961488,
+      "min": 0.8354997634887695,
+      "max": 0.848110556602478,
+      "final": 0.8356674909591675,
+      "final_coherence": 0.8452585339546204,
+      "final_self_mass": 31.980712890625
+    },
+    {
+      "label": "gen0.15_cons1.0",
+      "gen_rate": 0.15,
+      "consumption_rate": 1.0,
+      "mean": 0.7234915472284148,
+      "stdev": 3.128794777674154e-05,
+      "min": 0.7233840823173523,
+      "max": 0.7236190438270569,
+      "final": 0.7234660387039185,
+      "final_coherence": 0.921505331993103,
+      "final_self_mass": 62.72526550292969
+    },
+    {
+      "label": "gen0.25_cons1.0",
+      "gen_rate": 0.25,
+      "consumption_rate": 1.0,
+      "mean": 0.7047878837363073,
+      "stdev": 5.213770031304129e-05,
+      "min": 0.7045462131500244,
+      "max": 0.7049044966697693,
+      "final": 0.7047889232635498,
+      "final_coherence": 0.9603903293609619,
+      "final_self_mass": 122.27865600585938
+    },
+    {
+      "label": "gen0.25_cons2.0",
+      "gen_rate": 0.25,
+      "consumption_rate": 2.0,
+      "mean": 0.7272404313166884,
+      "stdev": 8.641691891514521e-05,
+      "min": 0.7266793847084045,
+      "max": 0.7275134325027466,
+      "final": 0.7272148132324219,
+      "final_coherence": 0.9239614009857178,
+      "final_self_mass": 60.999961853027344
+    },
+    {
+      "label": "gen0.1_cons0.5",
+      "gen_rate": 0.1,
+      "consumption_rate": 0.5,
+      "mean": 0.7227100017942801,
+      "stdev": 4.8689468851991256e-05,
+      "min": 0.7225086092948914,
+      "max": 0.7228125333786011,
+      "final": 0.7226987481117249,
+      "final_coherence": 0.9222316741943359,
+      "final_self_mass": 70.07659912109375
+    },
+    {
+      "label": "gen0.3_cons2.0",
+      "gen_rate": 0.3,
+      "consumption_rate": 2.0,
+      "mean": 0.7201219145096913,
+      "stdev": 0.00028983077923278933,
+      "min": 0.7188860177993774,
+      "max": 0.7204354405403137,
+      "final": 0.7201350331306458,
+      "final_coherence": 0.9392116665840149,
+      "final_self_mass": 76.184326171875
+    }
+  ]
+}

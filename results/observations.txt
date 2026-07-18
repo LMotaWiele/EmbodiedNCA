@@ -1,0 +1,32 @@
+# v0 sanity-check observations (auto-generated)
+device: cuda
+horizon: 2000
+seed: 0
+
+## Check 1 — break-even near a well
+- Selected rates: gen_rate=0.2, consumption_rate=1.0 (gen0.2_cons1.0)
+- Steady-state local R @ centroid (post burn-in): mean=0.7064, stdev=0.0001, range=[0.7058, 0.7065]
+- Final coherence / self_mass: 0.9467188715934753 / 91.85530853271484
+- Plot: /home/george-contis/Documents/ConscNCA/embodied_nca/results/check1_breakeven.png
+- Full sweep: results/check1_sweep.json
+
+## Check 2 — distance-dependence
+- Final coherences: {2: 0.7287890911102295, 4: 0.5210376381874084, 8: -0.0028304168954491615}
+- Mean coherences: {2: 0.7335099913608069, 4: 0.5361752215175257, 8: 0.10129988891480468}
+- Distance effect visible: True
+- Placements: {'2': (8, 10), '4': (8, 12), '8': (8, 16)}
+- Plot: /home/george-contis/Documents/ConscNCA/embodied_nca/results/check2_distance.png
+
+## Check 3 — gating ablation
+- Final coherence: {'gated': 0.7287890911102295, 'ungated': 0.9670450091362, 'zero': 0.0848948135972023}
+- Mid-horizon coherence: {'gated': 0.7286006212234497, 'ungated': 0.9797028303146362, 'zero': 0.1076820120215416}
+- Mean coherence: {'gated': 0.7335099913608069, 'ungated': 0.9665433360242296, 'zero': 0.16087702273771443}
+- Ordering ungated >= gated >= zero: True
+- Pattern center: (8, 10)
+- Plot: /home/george-contis/Documents/ConscNCA/embodied_nca/results/check3_gating.png
+
+## World-physics notes
+- S diffusion: unopposed erosion when gate is low.
+- R diffusion + soft wells: distance-dependent resource field.
+- Self-maintenance weights trained offline (translations + partial
+  gates + curriculum); no external controller at runtime.
