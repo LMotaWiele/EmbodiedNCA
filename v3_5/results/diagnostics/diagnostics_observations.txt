@@ -1,0 +1,163 @@
+# v3.5 post-stage diagnostics (D1–D4)
+
+Follow-ups to the Stage A result that a hand-coded wear_aware_heuristic ties or
+slightly beats selected. Resolve what we can trust before any v4.
+
+## D1 — local_R within-bin collapse
+
+- overall local_R r=0.8954  MAE=0.1213  true_std≈0.35
+- **headline: 3 bin(s) VARIANCE_COLLAPSE, 0 GENUINE_FAILURE, 0 LOW_R_OK_MAE**
+
+| bin | n | true mean±std | pred_std | r | MAE | diagnosis |
+|-----|--:|--------------:|---------:|--:|----:|-----------|
+| [0,2) | 480 | 0.731±0.326 | 0.291 | 0.696 | 0.169 | OK |
+| [2,4) | 57 | 0.505±0.424 | 0.337 | 0.721 | 0.200 | OK |
+| [4,6) | 30 | 0.109±0.162 | 0.283 | 0.453 | 0.245 | OK |
+| [6,8) | 42 | 0.015±0.061 | 0.109 | 0.014 | 0.108 | **VARIANCE_COLLAPSE** |
+| [8,10) | 75 | 0.001±0.003 | 0.108 | 0.155 | 0.078 | **VARIANCE_COLLAPSE** |
+| [10,14) | 508 | 0.014±0.090 | 0.148 | 0.563 | 0.069 | **VARIANCE_COLLAPSE** |
+
+- mid/far abs_err vs wear_asym r=0.010  (≈0)
+- mid/far MAE high_asym=0.0800  low_asym=0.0808
+- mid/far r high_asym=0.562  low_asym=0.525
+
+### D1 interpretation
+- The near-zero within-bin r at [6,8) and [8,10) is the **same variance-collapse
+  artifact as v1/v2**, not a new per-well-wear failure. True local_R in those
+  regimes is almost constant near zero (std 0.061 and 0.003); Pearson r is
+  uninformative when there is no variance to explain. MAE remains small
+  (0.08–0.11) — absolute error is fine.
+- [10,14) is labeled VARIANCE_COLLAPSE by the true_std threshold but still has
+  r=0.56 and MAE=0.069 — not a liability.
+- **No genuine prediction failure** in any bin.
+- abs_err does **not** correlate with wear asymmetry (r≈0). This does **not**
+  point at a fixable "which well's multiplier" input-representation gap for
+  local_R. Near/mid bins where local_R actually varies ([0,2), [2,4)) are OK
+  (r≥0.70).
+- **Trust local_R for resource-state claims in regimes where true local_R has
+  variance.** Far-distance near-zero local_R is a physics fact (starved
+  pattern), not a model blind spot.
+
+- plot: results/diagnostics/d1_local_R_bins.png
+
+## D2 — decoupled floor-crossing
+
+- Protocol: set initial_wear=(2.7, 0.3) **without** physical pre-boosts (so R
+  field stays healthy). Place pattern at dist=2 from **well B** (the fresh
+  well). Well A floors early via ambient; pattern survives on B.
+- t_floor A/B/all = 300 / 732 / 732
+- tod = None  post_floor_life = 3700  **decoupled_ok = True**
+- mean_coh=0.6588  n_boosts=134  **vol_skip=0** (entire episode)
+
+Windows (alive decisions):
+- pre_first_floor: boost_rate=0.667  vol_skip=0.000  n=15
+- partial_floor: boost_rate=0.682  vol_skip=0.000  n=22
+- post_all_floor: boost_rate=0.665  vol_skip=0.000  n=164
+- around_floor −400..0: boost=0.667  vol_skip=0
+- around_floor 0..400: boost=0.650  vol_skip=0
+- around_floor 400..800: boost=0.700  vol_skip=0
+
+- **verdict: NO_FLOOR_TIMING_SIGNAL**
+
+### D2 interpretation
+- Floor-crossing is cleanly decoupled from death (survives 3700 steps after
+  first floor). There is **no skip-spike** at floor-crossing: voluntary skip
+  rate is identically zero; boost rate is flat at the budget-limited ~2/3
+  throughout.
+- Stage A's dist=4 late-skip spike was **near-death, not floor-timing**.
+- **Close the v3 timing hypothesis** as not supported by the self-model under
+  this operating point. The model has the skip candidate and wear inputs, but
+  does not use them for floor-aware restraint when the pattern is healthy.
+
+- plot: results/diagnostics/d2_decoupled_floor_timing.png
+
+## D3 — selected vs wear_aware: what differs + multi-seed
+
+### Selection-log diff (dist=2, seed=0, Check 3 pre-degrade)
+- sel mean_coh=0.5124  wah=0.5188  (Δ=−0.0064)
+- alive boosts: selected=7  wear_aware=10
+- common alive decisions: 15
+  - both_act=7  only_sel=0  only_wah=3  both_skip=5
+- when both act: **same_well=7 / diff_well=0**  same_sector=1 / diff_sector=6
+
+Both always boost near well A (the pre-degraded well — geometry places the
+pattern near A). wear_aware consistently picks sector 0 (angle toward the
+fresher well B's direction from centroid, but nearest-well attribution of
+the boost cell is still A because the pattern sits on A's side). selected
+scatters across sectors 0–5 on the same well. The residual gap is **not about
+which well** (they agree) and only weakly about sector identity; more of the
+count difference is **only_wah=3** extra boosts by the heuristic.
+
+### Multi-seed (placement angle varied; dynamics are deterministic at fixed center)
+NOTE: seed alone does not diversify deterministic policies; we vary placement
+angle (east / NE / SE) at fixed |distance|.
+
+- dist=2: mean Δ(sel−wah)= **−0.0083 ± 0.0153**  [seed_sensitive_mixed]
+  - seed0 ang=0.00: Δ=−0.0064
+  - seed1 ang=+π/4: Δ=−0.0278
+  - seed2 ang=−π/4: Δ=+0.0095  (selected wins this one, |Δ|<0.01)
+- dist=4: mean Δ= **−0.0397 ± 0.0265**  [reproducibly_loses]
+  - seed0: Δ=−0.0120
+  - seed1: Δ=−0.0753
+  - seed2: Δ=−0.0316
+  - all three seeds: selected loses (sign-consistent; magnitude varies)
+
+### D3 interpretation
+- The Stage A "ties at dist=2 / loses at dist=4" ranking is **not pure noise**.
+  Dist=4 is reproducibly a loss for selected across placement angles
+  (mean Δ≈−0.04). Dist=2 is a genuine near-tie (mean Δ≈−0.008, within the
+  MEANINGFUL_COH_DELTA=0.01 band; sign flips once at |Δ|<0.01).
+- The residual is **not frequency of skipping alone** (counts are similar) and
+  **not which well** (both always act on the pattern-side well under this
+  pre-degrade geometry). It is a mix of (a) a few extra heuristic boosts
+  (only_wah) and (b) sector choice within the same well — small absolute
+  effect at dist=2, larger and consistent at dist=4.
+- Treat "selected loses or ties wear_aware under asymmetric pre-wear" as a
+  **reproducible finding**, not a single-seed fluke.
+
+- plots: d3_multiseed_selected_vs_wear_aware.png, d3_selection_timeline.png
+
+## D4 — noise-type death blind spot
+
+- Stage A death rates by pert type:
+  - null:  0.379 (588/1550)
+  - noise: **0.0016 (3/1922)**
+  - zero:  0.455 (882/1940)
+  - boost: 0.372 (962/2588)
+- baseline noise-in-val: n=282  death_rate=0.007  bal_acc=0.496  TP=0 FN=2
+- Late-state far-distance noise forks (pred_H=400, n=1498): **n_dead=0**
+- **verdict: STRUCTURALLY_RARE_NOISE_DEATH**
+
+### D4 interpretation
+- Noise-type death is not a model blind spot that more far-distance sampling
+  will fix. Under this physics and prediction horizon, **noise almost never
+  kills** (unlike zero / null / boost). Even late-host forks with H=400
+  produced zero death labels.
+- The 2 FN in val are statistical dust (2/282). Not worth architecture work.
+- Do not block v4 planning on this; do not retrain for noise-death specifically
+  unless the intervention or horizon changes so that noise becomes lethal.
+
+- plot: d4_noise_death_confusion.png (death-rate-by-type bar)
+
+## Bigger picture (before v4)
+
+1. **local_R far-bin "collapse" is benign** (variance artifact). Near-bin local_R
+   is usable. No evidence of a wear-asymmetry encoding failure for local_R.
+2. **Floor-timing hypothesis is closed.** Decoupled D2: zero voluntary skips
+   across floor-crossing with 3700 steps of post-floor life. Stage A dist=4
+   skip spike was near-death.
+3. **selected vs wear_aware is real and not single-seed noise.** Dist=4 loss
+   reproduces across placements; dist=2 is a true near-tie. The gap is small
+   and not explained by well choice — the heuristic still wins or ties.
+4. **Noise-death "blind spot" is structural label rarity**, not a modeling gap.
+
+This is now the second consecutive stage where a hand-coded rule matches or
+beats a trained self-model (v2 geometry; v3.5 wear-aware). Items 1–3 above
+are resolved cheaply and do **not** reveal a hidden capability the model has
+that a bad encoding is masking. That removes the strongest "try the model
+again with a better input" rationale for a v4 that adds yet another mechanism
+hoping the self-model finally pulls ahead. Any next stage should either:
+- target a regime where a single-comparison heuristic is *structurally*
+  insufficient (true multi-step lookahead value), or
+- accept the heuristic as the controller and use the self-model only where
+  calibration is strong (coherence, survival, near-well local_R).

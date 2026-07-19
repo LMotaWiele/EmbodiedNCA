@@ -1,0 +1,168 @@
+# v5 Generalization to Novel Well Layouts — observations (closing stage)
+device: cuda
+quick: False
+v0_ckpt: /home/george-contis/Documents/EmbodiedNCA/v0/results/trained_nca.pt
+self_model: /home/george-contis/Documents/EmbodiedNCA/v3_5/results/self_model_v3_5.pt
+NOTE: frozen self_model_v3_5.pt — zero-shot only; no retraining.
+
+## Layout
+- original (training) wells: [(8, 8), (24, 24)]
+- relocated wells: [(12, 20), (28, 4)]
+- inter-well distance: original=22.6274  relocated=22.6274
+- rationale: Relocated wells (12,20) and (28,4) keep inter-well distance 22.627
+  equal to training 22.627 (16√2). Spec example (12,20)/(20,6) has shorter
+  separation (~16.1); we preserve geometry so the test is "different layout"
+  not "harder map".
+- Heuristic update: `AttentionConfig(wells=RELOCATED)` /
+  `PerWellWearConfig(wells=RELOCATED)` / placement `well=RELOCATED[0]` —
+  position parameters only. This ease-of-update is part of what is being
+  tested: heuristic generalization is nearly free; self-model generalization
+  is an open empirical question.
+
+## Check 1 — zero-shot calibration (original vs relocated)
+- original_source: v3_5_death_aware_val
+- original: n=1200  coh_r=0.9170  within_bin=0.8454  local_R_r=0.8954  coh_mae=0.1213
+- relocated: n=2500  coh_r=0.9188  within_bin=0.8509  local_R_r=0.8951  coh_mae=0.1399  death_rate=0.3168
+- Δ within_bin (reloc − orig) = +0.0055
+- Δ coh_r (reloc − orig) = +0.0018
+- pass_within_bin_relocated: True
+- holds_up: True
+- collapsed: False
+- **verdict: held_comparable**
+- plot: results/check1_calibration_original_vs_relocated.png
+- bar_plot: results/check1_calibration_metrics_bar.png
+
+### Check 1 interpretation
+Calibration **held** on the relocated layout at a level comparable to the
+original map (within-bin r 0.845 → 0.851; overall coh r 0.917 → 0.919).
+The self-model's predictive channels transfer zero-shot when wells move
+(with inter-well geometry preserved). This is **not** a collapse-to-coordinates
+failure: the model did not merely memorize "wells at pixel X,Y" for
+prediction of coherence / local_R.
+
+## Check 2 — policy comparison on relocated layout
+- wells: [(12, 20), (28, 4)]
+- horizon: 3000
+- pre_degrade_boosts near well A: 80  preview wear≈[8.0, 1.6] mult≈[0.40, 0.68]
+- Policies: selected, wellward_heuristic, **wear_aware_heuristic**, never_boost, always_boost
+- Fair test: heuristics get new coordinates (free); self-model is zero-shot on
+  a layout absent from training.
+- dist=2:
+  - selected mean_coh = 0.5120
+  - wear_aware_heuristic mean_coh = 0.4850
+  - wellward_heuristic mean_coh = 0.4850
+  - never_boost mean_coh = 0.3804
+  - always_boost mean_coh = 0.4850
+  - Δ(selected − wear_aware) = +0.0269
+  - **selected beats wear_aware_heuristic**
+  - original-layout ref: selected ties wear_aware  Δ=−0.0064
+  - [selected] boosts=7/151  vol_skip=140  tod=331
+  - [wellward_heuristic] boosts=12/151  vol_skip=0  tod=351
+  - [wear_aware_heuristic] boosts=12/151  vol_skip=0  tod=351
+  - [never_boost] boosts=0/151  vol_skip=0  tod=365
+  - [always_boost] boosts=12/151  vol_skip=0  tod=351
+- dist=4:
+  - selected mean_coh = 0.3855
+  - wear_aware_heuristic mean_coh = 0.3347
+  - wellward_heuristic mean_coh = 0.3456
+  - never_boost mean_coh = 0.2821
+  - always_boost mean_coh = 0.3456
+  - Δ(selected − wear_aware) = +0.0507
+  - **selected beats wear_aware_heuristic**
+  - original-layout ref: selected loses_to wear_aware  Δ=−0.0120
+  - [selected] boosts=13/151  vol_skip=131  tod=398
+  - [wellward_heuristic] boosts=15/151  vol_skip=0  tod=445
+  - [wear_aware_heuristic] boosts=16/151  vol_skip=0  tod=461
+  - [never_boost] boosts=0/151  vol_skip=0  tod=531
+  - [always_boost] boosts=15/151  vol_skip=0  tod=445
+- **pattern outcome: self_model_wins_or_ties_more**
+- plot: results/check2_policy_comparison_relocated.png
+- delta_plot: results/check2_delta_original_vs_relocated.png
+
+### Multi-seed + selection-log scrutiny (required for positive-looking Check 2)
+Seeds {0,1,2,3,4} at dist 2 and 4 (same protocol). Policies are deterministic
+(argmax / pure geometry), so all five seeds produce **identical** trajectories
+(std=0). Result is therefore not a one-seed fluke of RNG:
+
+| dist | selected | wear_aware | wellward | Δ(sel−wah) | seeds sel_better |
+|-----:|---------:|-----------:|---------:|-----------:|-----------------:|
+| 2 | 0.5120 | 0.4850 | 0.4850 | +0.0269 | 5/5 |
+| 4 | 0.3855 | 0.3347 | 0.3456 | +0.0507 | 5/5 |
+
+Selection-log (seed 0):
+- dist=2: wear_aware boost sectors Counter({2:11, 3:1}) **≡** wellward;
+  selected boosts more sparingly (7 vs 12) with heavy voluntary skip (140/151).
+- dist=4: wear_aware ≈ wellward (both dominate sector 2 toward nearest/pre-degraded
+  well A); selected diversifies (sectors 2,5,1,4) and still skips heavily.
+- both-boost same-sector rate selected↔wear_aware: 4/7 (d2), 5/12 (d4).
+
+### Honest reading of the Check 2 "win"
+Absolute levels matter:
+- selected on relocated ≈ selected on original (d2: 0.5120 vs 0.5124; d4: 0.3855 vs 0.3795)
+- wear_aware **degraded** vs original (d2: 0.5188→0.4850; d4: 0.3915→0.3347)
+
+So the relative win is real (selected beats the position-updated heuristic) but
+**not** because the self-model suddenly improved — its absolute competence held
+while the hand-coded wear rule lost angular discrimination: on this layout, the
+fresher well (B at (28,4)) sits ~40° from the nearest well (A) from the pattern
+placement, so 6-sector discretization collapses wear_aware into wellward (exact
+match at d2). selected's frugal skip-heavy policy still edges both geometry
+baselines.
+
+Pattern classification remains **self_model_wins_or_ties_more**, with the caveat
+that the margin change is driven more by heuristic collapse under sector
+quantization than by a large transfer bonus for the model. Still a complete,
+reportable outcome: once wells move, a one-line position update does not
+automatically keep the heuristic at the original fair bar when geometry makes
+"fresher well" and "nearest well" angularly close.
+
+Artifact: results/check2_multiseed.json
+
+## Check 3 — architectural support for N≠2 wells
+- supports_variable_n_wells: False
+- n_wells_checkpoint: 2
+- conv_in_channels: 36  (S=32 + R + pert + wear×2)
+- forward_two_wells_ok: True
+- forward_three_wells_ok: False
+- forward_three_wells_error: RuntimeError: expected 36 channels, got 37
+- mechanics_variable_n (PerWellWearState): True (with matching wear0 length)
+- three_well_run_performed: False
+- reason_stopped: architectural fixed n_wells=2; Stage A does not retrain
+- **verdict: not_supported**
+
+self_model_v3_5 does NOT support N≠2 wells without modification: fixed
+n_wells=2 wear input channels. Per-well wear *mechanics* are variable-N, but
+the frozen self-model's input encoding is two-slot. Concrete architectural
+generalization limit — reported as the finding; no three-well run and no retrain.
+
+## Project closing statement (v0–v5)
+
+EmbodiedNCA (v0–v5) built a resource-gated embedded-pattern NCA world (v0), then
+successively asked whether a learned self-model of future coherence / local
+resource / survival could earn its complexity over hand-coded controls as
+geometry (v2), asymmetric per-well wear (v3.5), chained identity (v4), and
+finally **novel well layouts** (v5) were introduced. On fixed maps, correctly
+parameterized heuristics matched or beat `selected`. On the closing zero-shot
+relocation test, calibration **held** (no coordinate-memorization collapse for
+prediction), `selected` **beat** position-updated heuristics with multi-seed
+deterministic confirmation — largely because absolute model performance held
+while the wear heuristic lost sector resolution when fresher- and nearest-well
+directions nearly coincided — and variable well-count (N≠2) is architecturally
+**unsupported** for the frozen self-model. The project's complete answer: this
+stack produces a useful predictive self-model that transfers across two-well
+layouts, but does not establish a general consciousness-adjacent controller
+advantage; hand-coded geometry/wear rules remain competitive whenever their
+parameters can be set, and fixed two-well input encoding is a hard stop for N>2.
+Further work (continual learning / decision-driven plasticity) is a different
+codebase and question, not Stage B of this one.
+
+## Honesty notes
+- Negative *or* carefully-qualified positive zero-shot results are complete
+  findings. No Stage B is planned from this repo.
+- Relocating wells is the fair version of the heuristic comparison: a designer
+  can parameterize positions; training data cannot invent layouts it never saw.
+- The Check 2 win is double-checked (multi-seed, selection logs) and still
+  framed with the absolute-level caveat above — not inflated into a claim that
+  the model "learned transfer" beyond holding its original competence.
+- No retraining, no new mechanics, no changes to v0 / SimpleNCA / frozen
+  checkpoints.

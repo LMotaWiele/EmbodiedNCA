@@ -1,0 +1,54 @@
+# v4 — Persistent Identity Across Chained Challenges (Stage A)
+
+Multiple back-to-back scenario segments run as **one uninterrupted simulation**
+(`S`, `R`, `wear`, `A` never reset between segments), compared against the
+existing **episodic** protocol (full reset before each segment) on identical
+challenge sequences.
+
+**Stage A only:** frozen `self_model_v3_5.pt`, no retraining, no lifetime-trace
+(Stage B only if Stage A locates a gap that actually requires it).
+
+## Setup
+
+```bash
+cd EmbodiedNCA
+source .venv/bin/activate
+python v4/run_v4_checks.py
+python v4/run_v4_checks.py --quick
+```
+
+Requires `v0/results/trained_nca.pt` and `v3_5/results/self_model_v3_5.pt`.
+
+## Layout
+
+```
+v4/
+├── chained_protocol.py     # N segments, no reset; wear-matched preambles
+├── episodic_baseline.py    # same sequence, full reset between segments
+├── run_v4_checks.py
+├── results/
+└── README.md
+```
+
+## Mechanic
+
+- **Chained:** relocate the living pattern to the next distance; keep wear, R
+  scars, attention budget; death is terminal for the whole sequence.
+- **Episodic:** identical distances/durations; fresh `S0`/`R0`/`wear=0`/`A=A0`
+  each segment (prior-stage default).
+
+## Acceptance checks (this run)
+
+| Check | Question | Result |
+|------:|----------|--------|
+| 1 | Does inherited state change outcomes? | meaningful=True / wear_carry=True |
+| 2 | Calibration on inherited (seg_idx≥1, same chains)? | degraded=True thin_n=True |
+| 3 | Pathological decisions? | selected_path_rate=0.6 / wear_aware_bug=False |
+| 4 | Wear-matched residual path dep.? | control_ok=True residual_div=True n_eff=3 non_markov=False |
+
+Full write-up: `results/observations.txt`.
+
+## Non-goals
+
+No retraining, no lifetime trace, no RL, no multi-agent, no heuristic
+competition framing, no changes to v0 step / SimpleNCA / frozen checkpoints.

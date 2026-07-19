@@ -1,0 +1,110 @@
+# v2 action selection — final observations
+device: cuda
+seed: 0
+n_examples: 14000
+horizon_train: 100  burn_in: 20
+epochs: 25
+v0_ckpt: /home/george-contis/Documents/EmbodiedNCA/v0/results/trained_nca.pt
+
+## FINAL v2 VERDICT (read this first)
+
+**Question v2 asked:** does self-model-driven action selection earn its
+complexity under this design, on this geometry?
+
+**Answer: no.**
+
+Settled facts:
+
+1. **Mean coherence:** selected does not raise mean coherence over random /
+   round_robin / fixed / wellward_heuristic.
+2. **Low-variance effect:** real, via sticky argmax (mode_frac≈0.96–0.98,
+   switch_rate≈0.02). Switching baselines sawtooth; sticky policies are flat.
+3. **6-way fixed sweep:** selected locks onto the map's structurally
+   most-stable sector; fixed lock of that sector (no model) reproduces its
+   variance. s0 (original single-draw fixed) was worst-in-sweep — beating it
+   was a weak bar.
+4. **wellward_heuristic (final control):**
+   - **dist=4:** ≡ selected (mode=2, std 0.00084 vs 0.00095, mean_coh within
+     0.001). Three-line geometric rule = full pipeline.
+   - **dist=2:** modes differ. Selected → s4 (structural best, std=0.00031);
+     wellward → s2 (geometric wellward, std=0.00078). Centroid ≈ on well
+     (dist~0.24) so wellward angle is near-degenerate. Selected is slightly
+     stabler than pure wellward but still ≡ fixed(s4) with no model.
+5. **Naming:** not "confirms homeostasis" (v0 already did); not "reduce
+   surprise" (objective is value-argmax). Additional allocation-stability
+   on top of v0 base dynamics, fully matchable by zero-learning rules.
+
+**v2 is done.** Do not add more candidates / horizons / selectors on this
+single map. v3, if pursued, must face geometries a 3-line rule does not
+trivially solve (competing wells, dynamic wells, nearer≠better) — which
+requires retraining on varied geometries.
+
+---
+
+## Check 1 — boost-subset calibration
+- Boost held-out n=764
+- pooled coh r=0.9720  MAE=0.0361
+- mean within-bin coh r=**0.5393** (weak pass; strong near-well 0.73–0.92;
+  far bins variance-collapse)
+- local_R r=0.9911  MAE=0.0483
+- pass (≥0.5): True  strong_pass (≥0.7): False
+- plot: results/check1_boost_calibration.png
+
+## Attention budget
+- K=20  regen_rate=0.02  boost_cost=0.8  A_max=1.0  boost_mag=0.4
+  n_candidates=6  scarce=True (~50% of decisions fire a boost)
+
+## Check 2 — policy comparison (mean + variance + mechanism)
+
+### Mean coherence (does not beat baselines)
+| Dist | selected | random | round_robin | fixed(s0) | wellward |
+|-----:|---------:|-------:|------------:|----------:|---------:|
+| 2 | 0.7667 | 0.7672 | 0.7681 | 0.7761 | 0.7631 |
+| 4 | 0.5884 | 0.5949 | 0.5951 | 0.6059 | 0.5876 |
+| 8 | 0.2876 | 0.2826 | 0.2815 | 0.2891 | 0.2466 |
+
+### Post-transient coh_std t≥300
+| Dist | selected | wellward | fixed(s0) | random |
+|-----:|---------:|---------:|----------:|-------:|
+| 2 | **0.00031** | 0.00078 | 0.00586 | 0.00833 |
+| 4 | **0.00095** | **0.00084** | 0.00585 | 0.00835 |
+
+### Sector stickiness
+| Dist | selected mode | mode_frac | switch | wellward mode | mode_frac |
+|-----:|--------------:|----------:|-------:|--------------:|----------:|
+| 2 | **4** | 0.960 | 0.02 | **2** | 0.990 |
+| 4 | **2** | 0.980 | 0.02 | **2** | 0.990 |
+| 8 | 0 | 0.444 | 0.35 | 2 | 0.742 |
+
+## Check 2b — 6-way fixed-sector sweep
+| Dist | best fixed | best std | selected mode | selected std | match best? |
+|-----:|-----------:|---------:|--------------:|-------------:|:-----------:|
+| 2 | **s4** | 0.00030 | 4 | 0.00031 | yes |
+| 4 | **s2** (wellward) | 0.00084 | 2 | 0.00095 | yes |
+
+dist=2 ranks (stable→noisy): s4 ≪ s2 ≈ s3 ≈ s1 ≪ s5 ≪ s0  
+dist=4 ranks: s2 ≪ s4 ≈ s1 ≪ s3 ≪ s5 ≪ s0  
+
+structural_outlier + selected lands on it: **True** at dist 2/4.
+
+## Check 2c — wellward_heuristic vs selected
+- Implementation: argmin over candidates of |angle(centroid→candidate) −
+  angle(centroid→nearest well)|. No model, recomputed each decision.
+- dist=4: mode_match=True, std_ratio=1.13, Δmean_coh≈0.001 → **match**
+- dist=2: mode_match=False (4 vs 2), std_ratio=2.52, both ≪ random;
+  selected slightly stabler; explained by near-well degeneracy + structural
+  best = s4 ≠ geometric wellward s2
+- wellward_matches_selected_dist_2_4: False  
+- wellward_matches_selected_dist_4: True  
+
+## Check 3 — mask compliance
+- masked selected: 0  candidates dropped: 1  pass: True
+
+## Plots / artifacts
+- results/check1_boost_calibration.png
+- results/check2_policy_comparison.png
+- results/check2_fixed_sector_sweep.png
+- results/check2_d{2,4,8}_{policy}.csv
+- results/check2_d{2,4,8}_{policy}_selections.csv
+- results/check2_d{2,4,8}_fixed{0..5}.csv
+- results/summary.json

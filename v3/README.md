@@ -1,0 +1,129 @@
+# v3 — Wear-Coupled Environmental Consequence
+
+A monotonic, never-decreasing **wear** scalar that accumulates ambiently over
+time and faster under deliberate boosts, permanently degrading how much
+resource the wells can generate — plus a direct `R` cost at the boost target —
+so every deliberate action is doubly irreversible: it spends resource *now*,
+and it makes the environment permanently worse at replenishing resource *later*.
+
+Does **not** modify `v0` step logic, `SimpleNCA`, `v1/self_model.py`, or
+`v2/self_model_v2.py`. Does **not** retrain the self-model (Stage A).
+
+## Setup
+
+```bash
+cd EmbodiedNCA
+source .venv/bin/activate
+python v3/run_v3_checks.py
+# smoke test:
+python v3/run_v3_checks.py --quick
+```
+
+Requires:
+
+- `v0/results/trained_nca.pt`
+- `v2/results/self_model_v2.pt` (existing, unmodified)
+
+## Layout
+
+```
+v3/
+├── wear_dynamics.py       # wear accumulator + effective gen_rate + step wrapper
+├── boost_cost.py          # direct R charge at boost target (Option A)
+├── run_v3_checks.py       # Check 1 / 2 / 3
+├── results/
+└── README.md
+```
+
+## Mechanic 1 — wear
+
+```text
+wear ← wear + wear_ambient_rate + (wear_boost_rate if boost active else 0)
+effective_gen_rate ← gen_rate_base * max(gen_floor_frac, 1 − wear_decay_coeff * wear)
+```
+
+Pass `effective_gen_rate` into v0's unmodified
+`step_resource(..., gen_rate=effective_gen_rate)`. Wear never decreases.
+`gen_floor_frac > 0` so wells degrade to a reduced floor, not full exhaustion.
+
+## Mechanic 2 — direct boost cost (Option A)
+
+When a boost is applied, charge `R` at the boost cell **in addition to** v0's
+pre-gate `‖update‖` consumption:
+
+```text
+R[y, x] ← max(0, R[y, x] − direct_boost_cost)
+```
+
+Charged once per armed boost, never on skipped / `never_boost` intervals.
+
+## Acceptance criteria
+
+| Check | What |
+|------:|------|
+| 1 | Ambient-only: wear mono↑, egr ↓ to floor, never below; report timescale |
+| 2 | Policies under wear (incl. `never_boost`): does boosting hurt long-run? does wear-blind `selected` underperform `wellward`/`fixed`? |
+| 3 | egr formula consistency; direct cost only on real boosts |
+
+## Explicit non-goals
+
+- No self-model retrain (that is v3.5, only if Check 2 shows a real gap)
+- No per-well wear
+- No confidence channels, multi-agent, or RL
+- No change to `decay_rate`, wells, `SimpleNCA`, or base gating
+
+## Stage A honesty rule
+
+A correctly implemented mechanic that does **not** change policy rankings at
+the chosen operating point is a valid outcome. Report numbers; do not crank
+wear rates until something breaks in the desired direction.
+
+## Stage A result (horizon=5000, swept OP)
+
+**Operating point** (from Check 1 sweep, not first guess):
+
+| param | value |
+|------:|------:|
+| `wear_ambient_rate` | 0.001 |
+| `wear_boost_rate` | 0.004 |
+| `wear_decay_coeff` | 0.20 |
+| `gen_floor_frac` | 0.40 |
+| ambient steps → floor | ~3000 |
+| `direct_boost_cost` | 0.15 |
+
+| Check | Result |
+|------:|--------|
+| 1 mechanic | **PASS** — mono wear, egr→floor, closed-form error 0 |
+| 2 combined | `never_boost` wins mean_coh at dist 2/4; outlives greedy at dist 4 |
+| 2b **wear_only** (`direct_cost=0`) | **reproduces** nb advantage (Δ≈0.035 / 0.047) |
+| 2b **direct_only** (`wear_boost_rate=0`) | **does not** (Δ≈0.001 / 0.005) |
+| 2 selected vs wellward/fixed | **design foreclosure** (global wear), not a data result |
+| 3 consistency | **PASS**; `underperforms_*` uses \|Δ\|≥0.01 |
+
+### Attribution
+
+Two cost mechanics, different time-courses — ablated separately:
+
+1. **Boost-accelerated wear** → greedy policies hit gen_rate floor early
+   (dist 2: selected t≈824 vs never_boost t≈3000). **This is what drives the
+   never_boost advantage at this OP** (wear_only ≈ combined).
+2. **Direct R charge** compounds all horizon but **alone does not** produce a
+   measurable never_boost lead (direct_only Δ below 0.01).
+
+Pre/post ambient-floor (combined, dist 2): Δ(nb−sel) **+0.073 pre**,
+**−0.022 post** — the mean win is earned while egr still diverges, not as a
+late direct-cost grind after the floor. Dist 4 longevity (tod 2104 vs ~890)
+is the same early-collapse story.
+
+### selected vs wellward/fixed
+
+Not an empirical resolution: global wear is sector-blind by construction;
+shared A budget ⇒ identical boost counts ⇒ identical wear. Per-well wear
+opens this arm.
+
+```bash
+python v3/run_v3_checks.py                 # includes Check 2b
+python v3/run_v3_checks.py --skip_ablations
+```
+
+Full write-up: `results/observations.txt`.

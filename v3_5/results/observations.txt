@@ -1,0 +1,175 @@
+# v3.5 Per-Well Wear + Death-Aware Self-Model + No-Boost — observations
+device: cuda
+quick: False
+v0_ckpt: /home/george-contis/Documents/EmbodiedNCA/v0/results/trained_nca.pt
+self_model: /home/george-contis/Documents/EmbodiedNCA/v3_5/results/self_model_v3_5.pt
+NOTE: new checkpoint self_model_v3_5.pt — does not edit v1/v2.
+
+## Operating point (reused from v3 Stage A)
+- wear_ambient_rate = 0.001
+- wear_boost_rate = 0.004
+- wear_decay_coeff = 0.2
+- gen_floor_frac = 0.4
+- direct_boost_cost = 0.15
+- Attention: K=20 regen=0.035 boost_cost=1.0 A_max=1.5 mag=0.4
+- wear@floor = (1 − 0.4) / 0.2 = 3.0; ambient-only steps to floor ≈ 3000
+
+## Check 1 — per-well wear mechanic sanity
+- pass: True
+- no_cross_contamination: True
+- boost_only_on_A: True
+- mask closed-form ok: True
+- Controlled scenario: pattern near well A, boost always at well A for 800 steps.
+- final wear_A=4.0000 wear_B=0.8000  (cf: A gets ambient+boost every step → 800×0.005=4.0; B ambient only → 800×0.001=0.8)
+- final mult_A=0.4000 (floored) mult_B=0.8400
+- ambient-only control: both wells equal, match closed form
+- plot: results/check1_perwell_wear_egr.png
+
+## Check 2 — death-aware calibration
+- dataset n: 8000
+- episode_horizon=2800  pred_horizon=200  far_frac=0.65 (dist 6–13 overweighted)
+- **death_rate (class balance): 0.3044**  (died=2435, survived=5565)
+- nontrivial death rate: True  (not ~0 as in v1/v2 val sets)
+- type_counts: null=1550, noise=1922, zero=1940, boost=2588
+- Training: death oversampled to 1:1 in train; death_weight=2.0; surv_loss_scale=2.5; hidden=48
+- **survival balanced accuracy: 0.9716**
+- survival raw accuracy: 0.9717
+- death precision/recall: 0.9342 / 0.9715  f1=0.9525
+- confusion (death as +): TP=341 FP=24 FN=10 TN=825
+- coherence r_all=0.9170  within_bin_mean=0.8454  local_R r=0.8954
+- pass_survival (bal_acc > 0.5): True
+- pass_within_bin: True
+- plot: results/check2_death_aware_calibration.png
+
+### Check 2 interpretation
+First honest survival measurement in the project. With death rate ~30% under full
+v3.5 physics and wear channels in the input, the survival head is far above chance
+and the coh/local_R heads remain well-calibrated on the new distribution. This is
+a baseline, not a ceiling.
+
+## Check 3 — asymmetric-wear policy comparison
+- pre_degrade: 80 boost-durations near well A → wear≈[8.0, 1.6] mult≈[0.40, 0.68]
+  (well A starts floored; well B still above floor)
+- horizon: 3000
+- Policies: selected, wellward_heuristic, **wear_aware_heuristic**, never_boost, always_boost
+- **Central question:** does selected beat / match / lose to wear_aware_heuristic?
+
+- dist=2:
+  - selected mean_coh = 0.5124
+  - wear_aware_heuristic mean_coh = 0.5188
+  - wellward_heuristic mean_coh = 0.4840
+  - never_boost mean_coh = 0.3780
+  - always_boost mean_coh = 0.4840
+  - Δ(selected − wear_aware) = −0.0064
+  - **selected ties wear_aware_heuristic** (|Δ|<0.01)
+  - selected beats wellward by +0.0284 (old control; no longer the fair one)
+  - [selected] boosts=7/151  vol_skip=140  tod=330
+  - [wear_aware_heuristic] boosts=10/151  tod=294
+  - [wellward_heuristic] boosts=12/151  tod=351
+  - [never_boost] boosts=0/151  tod=367
+  - [always_boost] boosts=12/151  tod=351
+
+- dist=4:
+  - selected mean_coh = 0.3795
+  - wear_aware_heuristic mean_coh = 0.3915
+  - wellward_heuristic mean_coh = 0.3342
+  - never_boost mean_coh = 0.2584
+  - always_boost mean_coh = 0.3342
+  - Δ(selected − wear_aware) = −0.0120
+  - **selected loses_to wear_aware_heuristic**
+  - selected still beats wellward by +0.0453
+  - [selected] boosts=13/151  vol_skip=131  tod=405
+  - [wear_aware_heuristic] boosts=13/151  tod=372
+
+- plot: results/check3_asymmetric_policy.png
+- wear trajectories: results/check3_wear_trajectories.png
+
+### Central outcome (selected vs wear_aware_heuristic)
+- dist=2: **ties** (|Δ|<0.01)
+- dist=4: **loses_to** (Δ=−0.012)
+- Honest summary: the learned self-model does **not** earn its complexity over
+  the hand-coded wear-aware rule under asymmetric per-well wear at this OP.
+  selected *does* beat the old geometry-only wellward_heuristic (the comparison
+  that was design-foreclosed under global wear), but that is no longer the fair
+  bar. wear_aware_heuristic — boost the fresher well, skip only when both
+  floored — captures most of the available value with a single comparison.
+
+### What selected seems to do
+selected voluntary-skips heavily (140/151 and 131/151 decisions) after a few
+early boosts. That is frugal relative to always_boost/wellward, and it beats
+never_boost, but the hand-coded wear rule's slightly more targeted boosting
+toward the less-worn well edges it out on mean coherence. Both selected and
+wear_aware die early under the harsh pre-degrade (tod ~300–400); longevity is
+not the differentiator here.
+
+## Check 4 — timing behavior
+- Prediction from v3: boost rate lower while wear actively degrades toward the
+  floor; recovers after floor-crossing.
+- Dedicated *no pre-degrade* selected episodes (so floor-crossing is mid-horizon).
+- Decisions counted only while pattern is alive (post-death skips are artifacts).
+
+- dist=2 (survives full 5000):
+  - t_floor well0/well1/all = 824 / 3000 / 3000
+  - pre-floor boost_rate = 0.667 (n=150)
+  - post-floor boost_rate = 0.663 (n=101)
+  - vol_skip_alive = 0  (never voluntarily skips; rate is pure budget scarcity)
+  - **verdict: INCONCLUSIVE_SIMILAR** — rates match within 0.05; no learned
+    pre-floor restraint. Boost fraction ≈ regen·K / boost_cost ≈ 0.7.
+
+- dist=4 (dies at t=978, before all_floored):
+  - t_floor well0/well1/all = 840 / 3000 / 3000
+  - pre-floor boost_rate = 0.551 (n=49 alive decisions)
+  - post-floor: n=0 (never reaches all-floored while alive)
+  - **verdict: INSUFFICIENT_DATA** for the post-floor recovery half of the
+    prediction. Early bins show budget-limited boosting; late pre-death bins
+    show rising voluntary skip (possibly near-death / low-R driven, not
+    floor-timing).
+
+- plot: results/check4_boost_timing.png
+
+### Check 4 interpretation
+The specific v3 timing prediction is **not confirmed**. At dist=2, where the
+pattern lives past both floor-crossings, selected's boost rate is flat across
+the floor boundary and fully explained by the attention budget — zero voluntary
+skips. The skip option is available and competitive in the argmax, but the
+trained model does not prefer it for floor-timing at this OP. Near-death skip
+behavior at dist=4 is a different mechanism.
+
+## Honesty notes
+- A correctly implemented result that does not favor the learned model is a
+  valid, reportable outcome. This stage produced one: wear_aware_heuristic ≥
+  selected on the fair comparison.
+- Unattributed ~−0.02 post-floor residual from v3 is not chased here.
+- selected vs wellward under *global* wear was design-foreclosed; per-well wear
+  + wear_aware_heuristic is the fair comparison, and the hand-coded rule wins
+  or ties.
+- Next lever (if desired): something that genuinely requires multi-step
+  lookahead the heuristic cannot approximate with a single wear comparison —
+  not assumed in advance, and not forced by cranking parameters.
+
+## Post-stage diagnostics (D1–D4) — resolved
+
+Full write-up: `results/diagnostics/diagnostics_observations.txt`.
+Run: `python v3_5/run_v3_5_diagnostics.py`
+
+| ID | Question | Verdict |
+|----|----------|---------|
+| D1 | local_R far-bin collapse: artifact or failure? | **Variance collapse** (true local_R near-constant far away); MAE fine; no genuine failure; no wear-asymmetry correlation |
+| D2 | Floor-timing when decoupled from death? | **NO_FLOOR_TIMING_SIGNAL** — 3700 steps post-floor life, vol_skip=0, flat boost rate. Close the v3 timing hypothesis. |
+| D3 | selected vs wear_aware: real? which-well? | Dist=4 **reproducibly loses** (mean Δ≈−0.04 across 3 angles); dist=2 true near-tie. Both always boost same well; gap is sector/extra-boost, not well choice. |
+| D4 | Noise-type death blind spot | **STRUCTURALLY_RARE_NOISE_DEATH** (3/1922 Stage A; 0/1498 late forks). Not a modeling gap. |
+
+Bigger picture: second consecutive stage where a hand-coded rule matches/beats
+the learned model. Diagnostics do not reveal a hidden model capability masked
+by bad encoding. Do not start v4 assuming the next mechanism will finally make
+the self-model pull ahead.
+
+## Deliverables
+- v3_5/wear_perwell.py
+- v3_5/death_aware_rollout_dataset.py
+- v3_5/self_model_v3_5.py
+- v3_5/action_selection_v3_5.py
+- v3_5/run_v3_5_checks.py
+- v3_5/results/self_model_v3_5.pt
+- plots: check1_perwell_wear_egr, check2_death_aware_calibration,
+  check3_asymmetric_policy, check3_wear_trajectories, check4_boost_timing

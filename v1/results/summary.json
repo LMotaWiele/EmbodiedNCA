@@ -1,0 +1,813 @@
+{
+  "check1": {
+    "coherence_r_all": 0.9527390599250793,
+    "coherence_mae_all": 0.04890165477991104,
+    "coherence_r_alive": 0.9527390599250793,
+    "coherence_mae_alive": 0.04890165477991104,
+    "coherence_r_within_bin_mean": 0.8276664614677429,
+    "local_R_r_all": 0.9579357504844666,
+    "local_R_mae_all": 0.07302501052618027,
+    "local_R_mae_true_lt_0.2": 0.04073159024119377,
+    "local_R_mae_true_ge_0.2": 0.09071280807256699,
+    "local_R_r_true_lt_0.2": 0.6097308397293091,
+    "local_R_p95_abs_err_true_lt_0.2": 0.17835979163646698,
+    "local_R_max_abs_err_true_lt_0.2": 0.6447317600250244,
+    "n_local_R_lt_0.2": 637,
+    "by_distance": {
+      "[0,2)": {
+        "n": 274,
+        "coherence_r": 0.728112518787384,
+        "coherence_mae": 0.03160025179386139,
+        "local_R_r": 0.7727476358413696,
+        "local_R_mae": 0.05563470721244812,
+        "true_coh_mean": 0.8935388922691345,
+        "true_coh_std": 0.04657251015305519,
+        "true_local_R_mean": 0.6766613125801086,
+        "true_local_R_std": 0.1129188984632492
+      },
+      "[2,4)": {
+        "n": 317,
+        "coherence_r": 0.7812252640724182,
+        "coherence_mae": 0.037403129041194916,
+        "local_R_r": 0.8455211520195007,
+        "local_R_mae": 0.0630788505077362,
+        "true_coh_mean": 0.7696843147277832,
+        "true_coh_std": 0.06987658888101578,
+        "true_local_R_mean": 0.8488472104072571,
+        "true_local_R_std": 0.14399121701717377
+      },
+      "[4,6)": {
+        "n": 388,
+        "coherence_r": 0.8094359040260315,
+        "coherence_mae": 0.057531218975782394,
+        "local_R_r": 0.8851184844970703,
+        "local_R_mae": 0.11254837363958359,
+        "true_coh_mean": 0.5897740721702576,
+        "true_coh_std": 0.11235866695642471,
+        "true_local_R_mean": 0.6620597243309021,
+        "true_local_R_std": 0.31543171405792236
+      },
+      "[6,8)": {
+        "n": 386,
+        "coherence_r": 0.865651547908783,
+        "coherence_mae": 0.05459531024098396,
+        "local_R_r": 0.9303889274597168,
+        "local_R_mae": 0.10463162511587143,
+        "true_coh_mean": 0.47354573011398315,
+        "true_coh_std": 0.13235719501972198,
+        "true_local_R_mean": 0.42775923013687134,
+        "true_local_R_std": 0.41649019718170166
+      },
+      "[8,10)": {
+        "n": 215,
+        "coherence_r": 0.8882474303245544,
+        "coherence_mae": 0.05325118079781532,
+        "local_R_r": 0.9744009971618652,
+        "local_R_mae": 0.03405090048909187,
+        "true_coh_mean": 0.48692208528518677,
+        "true_coh_std": 0.12202462553977966,
+        "true_local_R_mean": 0.12373422086238861,
+        "true_local_R_std": 0.2880430519580841
+      },
+      "[10,13)": {
+        "n": 220,
+        "coherence_r": 0.8933261036872864,
+        "coherence_mae": 0.05755821615457535,
+        "local_R_r": 0.23413486778736115,
+        "local_R_mae": 0.021943585947155952,
+        "true_coh_mean": 0.47471004724502563,
+        "true_coh_std": 0.12285168468952179,
+        "true_local_R_mean": 0.009697318077087402,
+        "true_local_R_std": 0.033270951360464096
+      }
+    },
+    "by_perturbation": {
+      "null": {
+        "n": 303,
+        "coherence_r": 0.9882825613021851,
+        "coherence_mae": 0.016469022259116173,
+        "local_R_r": 0.9887380599975586,
+        "local_R_mae": 0.04980736970901489
+      },
+      "nonzero": {
+        "n": 1497,
+        "coherence_r": 0.9483110904693604,
+        "coherence_mae": 0.055466167628765106,
+        "local_R_r": 0.951752781867981,
+        "local_R_mae": 0.07772437483072281
+      }
+    },
+    "survival_acc": 1.0,
+    "survival_bce": 1.825455910875462e-05,
+    "n_dead_in_val": 0,
+    "n": 1800,
+    "n_alive": 1800,
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v1/results/check1_calibration.png",
+    "pass_r": true
+  },
+  "check2_3": {
+    "structure": {
+      "2": {
+        "core_mean": 0.06892567873001099,
+        "fringe_mean": 0.05043342337012291,
+        "bg_mean": 0.000621897226665169,
+        "bg_max": 0.08695083856582642,
+        "bg_p95": 0.0,
+        "core_over_fringe": 1.3666663981445888,
+        "core_over_bg": 110.82951889722958,
+        "trained_untrained_cosine": 0.8229523301124573,
+        "trained_naive_mass_cosine": 0.7509081363677979,
+        "naive_projection_coef": 0.04024631530046463,
+        "residual_frac_after_naive": 0.6314298510551453,
+        "trained_max": 0.10146284103393555,
+        "support_max": 0.10146284103393555,
+        "untrained_max": 2.261623740196228e-05,
+        "untrained_std": 3.5881071198673453e-06,
+        "untrained_is_constant": false,
+        "untrained_cosine_nan_reason": null,
+        "argmax": {
+          "y": 9,
+          "x": 8,
+          "value": 0.10146284103393555,
+          "on_support": true,
+          "global_y": 9,
+          "global_x": 8,
+          "global_value": 0.10146284103393555,
+          "global_on_support": true,
+          "global_on_equidistant_boundary": false,
+          "global_argmax_is_background": false,
+          "global_argmax_is_false_signal": false,
+          "safe": true
+        },
+        "global_argmax_is_background": false,
+        "trained_max_equals_bg_max": false,
+        "global_argmax_geometry": {
+          "cell": [
+            9,
+            8
+          ],
+          "distances": {
+            "well_8_8": 1.0,
+            "well_24_24": 21.93171219946131
+          },
+          "equidistant_multi_well_saddle": false,
+          "bg_p95": 0.0
+        },
+        "radial": {
+          "inner_mean": 0.06414620578289032,
+          "mid_mean": 0.047059159725904465,
+          "outer_mean": 0.04920150712132454,
+          "outer_over_inner": 0.767021195573754,
+          "centroid": [
+            7.951350688934326,
+            8.923749923706055
+          ]
+        }
+      },
+      "4": {
+        "core_mean": 0.03539540246129036,
+        "fringe_mean": 0.05374947190284729,
+        "bg_mean": 0.0008119296981021762,
+        "bg_max": 0.10295027494430542,
+        "bg_p95": 0.0,
+        "core_over_fringe": 0.6585254630968889,
+        "core_over_bg": 43.59363453224839,
+        "trained_untrained_cosine": 0.7855997681617737,
+        "trained_naive_mass_cosine": 0.5043643116950989,
+        "naive_projection_coef": 0.030047113075852394,
+        "residual_frac_after_naive": 0.8416925668716431,
+        "trained_max": 0.10295027494430542,
+        "support_max": 0.09950041770935059,
+        "untrained_max": 2.4080276489257812e-05,
+        "untrained_std": 3.6292935874371324e-06,
+        "untrained_is_constant": false,
+        "untrained_cosine_nan_reason": null,
+        "argmax": {
+          "y": 3,
+          "x": 17,
+          "value": 0.09950041770935059,
+          "on_support": true,
+          "global_y": 24,
+          "global_x": 8,
+          "global_value": 0.10295027494430542,
+          "global_on_support": false,
+          "global_on_equidistant_boundary": true,
+          "global_argmax_is_background": true,
+          "global_argmax_is_false_signal": true,
+          "safe": true
+        },
+        "global_argmax_is_background": true,
+        "trained_max_equals_bg_max": true,
+        "global_argmax_geometry": {
+          "cell": [
+            24,
+            8
+          ],
+          "distances": {
+            "well_8_8": 16.0,
+            "well_24_24": 16.0
+          },
+          "equidistant_multi_well_saddle": true,
+          "bg_p95": 0.0
+        },
+        "radial": {
+          "inner_mean": 0.03651576116681099,
+          "mid_mean": 0.03780146688222885,
+          "outer_mean": 0.05626458302140236,
+          "outer_over_inner": 1.5408296531483625,
+          "centroid": [
+            7.955854892730713,
+            10.894401550292969
+          ]
+        }
+      },
+      "8": {
+        "core_mean": 0.06129501014947891,
+        "fringe_mean": 0.08882910013198853,
+        "bg_mean": 0.00116728525608778,
+        "bg_max": 0.15038567781448364,
+        "bg_p95": 0.0,
+        "core_over_fringe": 0.6900329189204134,
+        "core_over_bg": 52.51028806106067,
+        "trained_untrained_cosine": 0.78108149766922,
+        "trained_naive_mass_cosine": 0.5793651938438416,
+        "naive_projection_coef": 0.08866695314645767,
+        "residual_frac_after_naive": 0.7949239015579224,
+        "trained_max": 0.15038567781448364,
+        "support_max": 0.1459915041923523,
+        "untrained_max": 2.3715198040008545e-05,
+        "untrained_std": 3.557235231710365e-06,
+        "untrained_is_constant": false,
+        "untrained_cosine_nan_reason": null,
+        "argmax": {
+          "y": 3,
+          "x": 21,
+          "value": 0.1459915041923523,
+          "on_support": true,
+          "global_y": 24,
+          "global_x": 8,
+          "global_value": 0.15038567781448364,
+          "global_on_support": false,
+          "global_on_equidistant_boundary": true,
+          "global_argmax_is_background": true,
+          "global_argmax_is_false_signal": true,
+          "safe": true
+        },
+        "global_argmax_is_background": true,
+        "trained_max_equals_bg_max": true,
+        "global_argmax_geometry": {
+          "cell": [
+            24,
+            8
+          ],
+          "distances": {
+            "well_8_8": 16.0,
+            "well_24_24": 16.0
+          },
+          "equidistant_multi_well_saddle": true,
+          "bg_p95": 0.0
+        },
+        "radial": {
+          "inner_mean": 0.06457700580358505,
+          "mid_mean": 0.07997274398803711,
+          "outer_mean": 0.09148027002811432,
+          "outer_over_inner": 1.4166072694711873,
+          "centroid": [
+            7.966087818145752,
+            15.556392669677734
+          ]
+        }
+      }
+    },
+    "structured_ok": true,
+    "residual_beyond_naive_ok": true,
+    "ablation_ok": true,
+    "ring_inversion": {
+      "2": false,
+      "4": true,
+      "8": true
+    },
+    "global_argmax_on_background": {
+      "2": false,
+      "4": true,
+      "8": true
+    },
+    "raw_argmax_safe": false,
+    "centers": {
+      "2": [
+        8,
+        10
+      ],
+      "4": [
+        8,
+        12
+      ],
+      "8": [
+        8,
+        16
+      ]
+    }
+  },
+  "saddle_probe": {
+    "saddles": [
+      [
+        24,
+        8
+      ],
+      [
+        8,
+        24
+      ]
+    ],
+    "corners": [
+      [
+        0,
+        0
+      ],
+      [
+        31,
+        31
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        31,
+        0
+      ]
+    ],
+    "mid_layout": [
+      [
+        16,
+        16
+      ]
+    ],
+    "equidistant_locus_note": "For wells (8,8) and (24,24), equidistant locus is x+y=32; includes (24,8), (8,24), (16,16). Runtime rule: |d_A-d_B|<eps.",
+    "by_distance": {
+      "2": {
+        "center": [
+          8,
+          10
+        ],
+        "pattern_peak": [
+          8,
+          8
+        ],
+        "sites": {
+          "24,8": {
+            "weight": 0.08695554733276367,
+            "mass": 0.00024013477377593517,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "8,24": {
+            "weight": 0.08694100379943848,
+            "mass": 0.00023975216026883572,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "0,0": {
+            "weight": 0.007925271987915039,
+            "mass": 0.0010091470321640372,
+            "R": 0.0017514616483822465,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 33.94112549695428
+            }
+          },
+          "31,31": {
+            "weight": 0.004344582557678223,
+            "mass": 0.0029640577267855406,
+            "R": 0.020425545051693916,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 32.526911934581186,
+              "24,24": 9.899494936611665
+            }
+          },
+          "0,31": {
+            "weight": 0.010232746601104736,
+            "mass": 2.9520509770009085e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "31,0": {
+            "weight": 0.011871695518493652,
+            "mass": 2.9520509770009085e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "16,16": {
+            "weight": 0.07761287689208984,
+            "mass": 0.008057528175413609,
+            "R": 0.033780261874198914,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 11.313708498984761
+            }
+          },
+          "8,0": {
+            "weight": 0.008785605430603027,
+            "mass": 0.008215878158807755,
+            "R": 0.12651997804641724,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "0,16": {
+            "weight": 0.022679924964904785,
+            "mass": 0.0012172918068245053,
+            "R": 1.0562185707385652e-05,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "16,0": {
+            "weight": 0.025640428066253662,
+            "mass": 0.00179576245136559,
+            "R": 0.0028407168574631214,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "0,8": {
+            "weight": 0.019856572151184082,
+            "mass": 0.01315588690340519,
+            "R": 0.05766880884766579,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "8,8": {
+            "weight": 0.10134851932525635,
+            "mass": 3.836341142654419,
+            "R": 0.6838406920433044,
+            "on_support": true,
+            "dist_to_wells": {
+              "8,8": 0.0,
+              "24,24": 22.627416997969522
+            }
+          }
+        },
+        "saddle_weights": {
+          "24,8": 0.08695554733276367,
+          "8,24": 0.08694100379943848
+        },
+        "locus_weights": {
+          "24,8": 0.08695554733276367,
+          "8,24": 0.08694100379943848,
+          "16,16": 0.07761287689208984
+        },
+        "corner_max": 0.011871695518493652,
+        "corner_mean": 0.008593574166297913,
+        "mid_weight": 0.07761287689208984,
+        "edge_max": 0.025640428066253662,
+        "pattern_peak_weight": 0.10134851932525635,
+        "max_saddle_over_max_corner": 7.324604472146397,
+        "max_saddle_over_mid": 1.1203751182927073,
+        "max_locus_over_pattern_peak": 0.857985290084462,
+        "locus_beats_pattern_peak": false,
+        "saddles_dominate_corners": true
+      },
+      "4": {
+        "center": [
+          8,
+          12
+        ],
+        "pattern_peak": [
+          8,
+          10
+        ],
+        "sites": {
+          "24,8": {
+            "weight": 0.10294878482818604,
+            "mass": 0.00024014918017201126,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "8,24": {
+            "weight": 0.10185536742210388,
+            "mass": 0.00023761665215715766,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "0,0": {
+            "weight": 0.009227633476257324,
+            "mass": 0.0010875100269913673,
+            "R": 0.0025857752189040184,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 33.94112549695428
+            }
+          },
+          "31,31": {
+            "weight": 0.005140185356140137,
+            "mass": 0.0029640572611242533,
+            "R": 0.020425407215952873,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 32.526911934581186,
+              "24,24": 9.899494936611665
+            }
+          },
+          "0,31": {
+            "weight": 0.008970975875854492,
+            "mass": 2.9520509770009085e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "31,0": {
+            "weight": 0.01111149787902832,
+            "mass": 2.9520509770009085e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "16,16": {
+            "weight": 0.09522634744644165,
+            "mass": 0.009107495658099651,
+            "R": 0.02223098836839199,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 11.313708498984761
+            }
+          },
+          "8,0": {
+            "weight": 0.014214515686035156,
+            "mass": 0.00809516105800867,
+            "R": 0.14532411098480225,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "0,16": {
+            "weight": 0.02093827724456787,
+            "mass": 0.00426673237234354,
+            "R": 1.0562185707385652e-05,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "16,0": {
+            "weight": 0.024941980838775635,
+            "mass": 0.0019108908018097281,
+            "R": 0.0049873534590005875,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "0,8": {
+            "weight": 0.017570793628692627,
+            "mass": 0.007758691441267729,
+            "R": 0.09903760254383087,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "8,10": {
+            "weight": 0.043503403663635254,
+            "mass": 2.7357161045074463,
+            "R": 0.5770167708396912,
+            "on_support": true,
+            "dist_to_wells": {
+              "8,8": 2.0,
+              "24,24": 21.2602916254693
+            }
+          }
+        },
+        "saddle_weights": {
+          "24,8": 0.10294878482818604,
+          "8,24": 0.10185536742210388
+        },
+        "locus_weights": {
+          "24,8": 0.10294878482818604,
+          "8,24": 0.10185536742210388,
+          "16,16": 0.09522634744644165
+        },
+        "corner_max": 0.01111149787902832,
+        "corner_mean": 0.008612573146820068,
+        "mid_weight": 0.09522634744644165,
+        "edge_max": 0.024941980838775635,
+        "pattern_peak_weight": 0.043503403663635254,
+        "max_saddle_over_max_corner": 9.265059787474021,
+        "max_saddle_over_mid": 1.0810954822680026,
+        "max_locus_over_pattern_peak": 2.3664530242196027,
+        "locus_beats_pattern_peak": true,
+        "saddles_dominate_corners": true
+      },
+      "8": {
+        "center": [
+          8,
+          16
+        ],
+        "pattern_peak": [
+          8,
+          17
+        ],
+        "sites": {
+          "24,8": {
+            "weight": 0.15038105845451355,
+            "mass": 0.00024017634859774262,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "8,24": {
+            "weight": 0.1268981695175171,
+            "mass": 0.014581468887627125,
+            "R": 8.317265209889513e-10,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 16.0,
+              "24,24": 16.0
+            }
+          },
+          "0,0": {
+            "weight": 0.011274516582489014,
+            "mass": 0.0011041125981137156,
+            "R": 0.002812159014865756,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 33.94112549695428
+            }
+          },
+          "31,31": {
+            "weight": 0.005764365196228027,
+            "mass": 0.0029640207067131996,
+            "R": 0.020425625145435333,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 32.526911934581186,
+              "24,24": 9.899494936611665
+            }
+          },
+          "0,31": {
+            "weight": 0.009882926940917969,
+            "mass": 2.952176885173685e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "31,0": {
+            "weight": 0.012292444705963135,
+            "mass": 2.9520509770009085e-07,
+            "R": 3.901704320661795e-21,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 24.351591323771842,
+              "24,24": 25.0
+            }
+          },
+          "16,16": {
+            "weight": 0.12549474835395813,
+            "mass": 0.011685767211019993,
+            "R": 0.012482523918151855,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 11.313708498984761
+            }
+          },
+          "8,0": {
+            "weight": 0.022515326738357544,
+            "mass": 0.008176742121577263,
+            "R": 0.1490126997232437,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "0,16": {
+            "weight": 0.028185725212097168,
+            "mass": 0.011591090820729733,
+            "R": 1.0562185707385652e-05,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "16,0": {
+            "weight": 0.03741109371185303,
+            "mass": 0.0019486489472910762,
+            "R": 0.00589011050760746,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 11.313708498984761,
+              "24,24": 25.298221281347036
+            }
+          },
+          "0,8": {
+            "weight": 0.018340349197387695,
+            "mass": 0.00876393262296915,
+            "R": 0.14052681624889374,
+            "on_support": false,
+            "dist_to_wells": {
+              "8,8": 8.0,
+              "24,24": 28.844410203711913
+            }
+          },
+          "8,17": {
+            "weight": 0.036178141832351685,
+            "mass": 1.6130627393722534,
+            "R": 0.00038254211540333927,
+            "on_support": true,
+            "dist_to_wells": {
+              "8,8": 9.0,
+              "24,24": 17.46424919657298
+            }
+          }
+        },
+        "saddle_weights": {
+          "24,8": 0.15038105845451355,
+          "8,24": 0.1268981695175171
+        },
+        "locus_weights": {
+          "24,8": 0.15038105845451355,
+          "8,24": 0.1268981695175171,
+          "16,16": 0.12549474835395813
+        },
+        "corner_max": 0.012292444705963135,
+        "corner_mean": 0.009803563356399536,
+        "mid_weight": 0.12549474835395813,
+        "edge_max": 0.03741109371185303,
+        "pattern_peak_weight": 0.036178141832351685,
+        "max_saddle_over_max_corner": 12.233606879312958,
+        "max_saddle_over_mid": 1.198305494404504,
+        "max_locus_over_pattern_peak": 4.156681611359646,
+        "locus_beats_pattern_peak": true,
+        "saddles_dominate_corners": true
+      }
+    },
+    "saddles_dominate_corners_all": true,
+    "both_saddles_hot_all": true,
+    "locus_beats_pattern_peak_by_dist": {
+      "2": false,
+      "4": true,
+      "8": true
+    },
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v1/results/check_saddle_hotspots.png",
+    "confirmed_saddle_artifact": true,
+    "confirmed_false_signal_exceeds_pattern": true
+  }
+}

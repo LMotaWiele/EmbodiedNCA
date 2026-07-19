@@ -1,0 +1,1024 @@
+{
+  "check1": {
+    "sequence": [
+      [
+        2,
+        1500
+      ],
+      [
+        8,
+        1500
+      ],
+      [
+        4,
+        2000
+      ]
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "policies": [
+      "selected",
+      "wear_aware_heuristic",
+      "never_boost"
+    ],
+    "comparison": {
+      "selected": {
+        "segments": {
+          "0": {
+            "distance": 2,
+            "chained_mean_coh": 0.7024070712663905,
+            "episodic_mean_coh": 0.7024070712663905,
+            "delta_coh_chained_minus_episodic": 0.0,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": true,
+            "chained_survival": 1.0,
+            "episodic_survival": 1.0,
+            "chained_steps_run": 1500.0,
+            "episodic_steps_run": 1500.0,
+            "chained_start_mean_wear": 0.0,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 1.0,
+            "episodic_start_mean_mult": 1.0
+          },
+          "1": {
+            "distance": 8,
+            "chained_mean_coh": 0.6120319551853246,
+            "episodic_mean_coh": 0.19651445333631334,
+            "delta_coh_chained_minus_episodic": 0.41551750184901126,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": true,
+            "comparable_length": false,
+            "chained_survival": 0.0,
+            "episodic_survival": 0.0,
+            "chained_steps_run": 172.0,
+            "episodic_steps_run": 842.0,
+            "chained_start_mean_wear": 3.4999999999999383,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 0.5500000000000054,
+            "episodic_start_mean_mult": 1.0
+          },
+          "2": {
+            "distance": 4,
+            "chained_mean_coh": null,
+            "episodic_mean_coh": 0.5161914161591198,
+            "delta_coh_chained_minus_episodic": null,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": false,
+            "chained_survival": null,
+            "episodic_survival": 0.0,
+            "chained_steps_run": null,
+            "episodic_steps_run": 978.0,
+            "chained_start_mean_wear": null,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": null,
+            "episodic_start_mean_mult": 1.0
+          }
+        }
+      },
+      "wear_aware_heuristic": {
+        "segments": {
+          "0": {
+            "distance": 2,
+            "chained_mean_coh": 0.7432054585413009,
+            "episodic_mean_coh": 0.7432054585413009,
+            "delta_coh_chained_minus_episodic": 0.0,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": true,
+            "chained_survival": 1.0,
+            "episodic_survival": 1.0,
+            "chained_steps_run": 1500.0,
+            "episodic_steps_run": 1500.0,
+            "chained_start_mean_wear": 0.0,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 1.0,
+            "episodic_start_mean_mult": 1.0
+          },
+          "1": {
+            "distance": 8,
+            "chained_mean_coh": 0.6059080197714096,
+            "episodic_mean_coh": 0.27964082049230926,
+            "delta_coh_chained_minus_episodic": 0.32626719927910036,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": true,
+            "comparable_length": false,
+            "chained_survival": 0.0,
+            "episodic_survival": 0.0,
+            "chained_steps_run": 172.0,
+            "episodic_steps_run": 521.0,
+            "chained_start_mean_wear": 3.4999999999999383,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 0.5500000000000054,
+            "episodic_start_mean_mult": 1.0
+          },
+          "2": {
+            "distance": 4,
+            "chained_mean_coh": null,
+            "episodic_mean_coh": 0.5333632237762213,
+            "delta_coh_chained_minus_episodic": null,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": false,
+            "chained_survival": null,
+            "episodic_survival": 0.0,
+            "chained_steps_run": null,
+            "episodic_steps_run": 1000.0,
+            "chained_start_mean_wear": null,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": null,
+            "episodic_start_mean_mult": 1.0
+          }
+        }
+      },
+      "never_boost": {
+        "segments": {
+          "0": {
+            "distance": 2,
+            "chained_mean_coh": 0.7574882155891102,
+            "episodic_mean_coh": 0.7574882155891102,
+            "delta_coh_chained_minus_episodic": 0.0,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": true,
+            "chained_survival": 1.0,
+            "episodic_survival": 1.0,
+            "chained_steps_run": 1500.0,
+            "episodic_steps_run": 1500.0,
+            "chained_start_mean_wear": 0.0,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 1.0,
+            "episodic_start_mean_mult": 1.0
+          },
+          "1": {
+            "distance": 8,
+            "chained_mean_coh": 0.3282917858663332,
+            "episodic_mean_coh": 0.19355385776517933,
+            "delta_coh_chained_minus_episodic": 0.13473792810115384,
+            "meaningful_coh_delta": true,
+            "meaningful_structural": true,
+            "comparable_length": true,
+            "chained_survival": 0.0,
+            "episodic_survival": 0.0,
+            "chained_steps_run": 479.0,
+            "episodic_steps_run": 939.0,
+            "chained_start_mean_wear": 1.4999999999999456,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": 0.7000000000000108,
+            "episodic_start_mean_mult": 1.0
+          },
+          "2": {
+            "distance": 4,
+            "chained_mean_coh": null,
+            "episodic_mean_coh": 0.549382819005217,
+            "delta_coh_chained_minus_episodic": null,
+            "meaningful_coh_delta": false,
+            "meaningful_structural": false,
+            "comparable_length": false,
+            "chained_survival": null,
+            "episodic_survival": 1.0,
+            "chained_steps_run": null,
+            "episodic_steps_run": 2000.0,
+            "chained_start_mean_wear": null,
+            "episodic_start_mean_wear": 0.0,
+            "chained_start_mean_mult": null,
+            "episodic_start_mean_mult": 1.0
+          }
+        }
+      }
+    },
+    "cross_policy_inheritance": {
+      "selected": {
+        "mean_start_wear_seg1": [
+          5.499999999999932,
+          1.4999999999999456
+        ],
+        "mean_steps_seg1": 172.0,
+        "mean_end_wear_seg0": [
+          5.499999999999932,
+          1.4999999999999456
+        ]
+      },
+      "wear_aware_heuristic": {
+        "mean_start_wear_seg1": [
+          5.499999999999932,
+          1.4999999999999456
+        ],
+        "mean_steps_seg1": 172.0,
+        "mean_end_wear_seg0": [
+          5.499999999999932,
+          1.4999999999999456
+        ]
+      },
+      "never_boost": {
+        "mean_start_wear_seg1": [
+          1.4999999999999456,
+          1.4999999999999456
+        ],
+        "mean_steps_seg1": 479.0,
+        "mean_end_wear_seg0": [
+          1.4999999999999456,
+          1.4999999999999456
+        ]
+      },
+      "selected_wear_aware_seg0_wear_identical": true,
+      "selected_wear_aware_wear_max_abs_diff": 0.0,
+      "never_boost_lower_inherited_wear_than_selected": true
+    },
+    "any_meaningful_coh_delta": true,
+    "wear_carryover_confirmed": true,
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v4/results/check1_chained_vs_episodic.png"
+  },
+  "check2": {
+    "id_baseline": {
+      "coherence_mae_all": 0.1213376373052597,
+      "local_R_mae_all": 0.12134820222854614,
+      "source": "/home/george-contis/Documents/EmbodiedNCA/v3_5/results/summary.json"
+    },
+    "source_sequence": [
+      [
+        2,
+        1500
+      ],
+      [
+        8,
+        1500
+      ],
+      [
+        4,
+        2000
+      ]
+    ],
+    "source_note": "Calibration samples come from Check 1 chained selected runs on source_sequence \u2014 not a separate more-survivable chain. seg_idx\u22651 = second+ segment of that sequence (often a short death window if chains die mid-segment-1).",
+    "seg1": {
+      "n": 228,
+      "coherence_mae": 0.030112974737819872,
+      "local_R_mae": 0.09627434376039003,
+      "coherence_mean_abs_err": 0.030112974737819872,
+      "local_R_mean_abs_err": 0.09627434376039003,
+      "mean_wear_0": 2.749999999999956,
+      "mean_wear_1": 0.749999999999991,
+      "mean_mult_0": 0.565421052631581,
+      "mean_mult_1": 0.8500000000000018
+    },
+    "seg2_plus": {
+      "n": 27,
+      "coherence_mae": 0.24416551325056288,
+      "local_R_mae": 0.10329810993216092,
+      "coherence_mean_abs_err": 0.24416551325056288,
+      "local_R_mean_abs_err": 0.10329810993216092,
+      "mean_wear_0": 5.7222222222221655,
+      "mean_wear_1": 1.5799999999999368,
+      "mean_mult_0": 0.4,
+      "mean_mult_1": 0.6840000000000126
+    },
+    "seg_idx_0": {
+      "n": 228,
+      "coherence_mae": 0.030112974737819872,
+      "local_R_mae": 0.09627434376039003,
+      "coherence_mean_abs_err": 0.030112974737819872,
+      "local_R_mean_abs_err": 0.09627434376039003,
+      "mean_wear_0": 2.749999999999956,
+      "mean_wear_1": 0.749999999999991,
+      "mean_mult_0": 0.565421052631581,
+      "mean_mult_1": 0.8500000000000018
+    },
+    "seg_idx_ge_1_inherited": {
+      "n": 27,
+      "coherence_mae": 0.24416551325056288,
+      "local_R_mae": 0.10329810993216092,
+      "coherence_mean_abs_err": 0.24416551325056288,
+      "local_R_mean_abs_err": 0.10329810993216092,
+      "mean_wear_0": 5.7222222222221655,
+      "mean_wear_1": 1.5799999999999368,
+      "mean_mult_0": 0.4,
+      "mean_mult_1": 0.6840000000000126
+    },
+    "degradation_ratio_coherence": 2.012281750931859,
+    "degradation_ratio_local_R": 0.8512537312881666,
+    "meaningful_degradation": true,
+    "thin_inherited_sample": true,
+    "inherited_n_threshold_for_settled": 50,
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v4/results/check2_calibration_ood.png"
+  },
+  "check3": {
+    "selected": {
+      "n_boost_seg2plus": 15,
+      "n_pathological_seg2plus": 9,
+      "n_boost_while_both_floored": 0,
+      "n_boost_toward_more_worn": 9,
+      "pathological_rate_seg2plus": 0.6,
+      "looks_like_bug": false,
+      "per_seed": [
+        {
+          "seed": 0,
+          "full": {
+            "n_boost": 56,
+            "n_path": 24,
+            "rate": 0.42857142857142855
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 3,
+            "rate": 0.6
+          }
+        },
+        {
+          "seed": 1,
+          "full": {
+            "n_boost": 56,
+            "n_path": 24,
+            "rate": 0.42857142857142855
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 3,
+            "rate": 0.6
+          }
+        },
+        {
+          "seed": 2,
+          "full": {
+            "n_boost": 56,
+            "n_path": 24,
+            "rate": 0.42857142857142855
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 3,
+            "rate": 0.6
+          }
+        }
+      ],
+      "example_flags": [
+        {
+          "t": 1540,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.539999999999945,
+            1.5399999999999412
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.0000000000000036,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.3478614464325793
+        },
+        {
+          "t": 1560,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.639999999999943,
+            1.559999999999939
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.080000000000004,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.986092481133734
+        },
+        {
+          "t": 1660,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.97999999999995,
+            1.659999999999928
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.320000000000022,
+          "sector": 4,
+          "policy": "selected",
+          "choice_angle": -1.117488460188445
+        },
+        {
+          "t": 1540,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.539999999999945,
+            1.5399999999999412
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.0000000000000036,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.3478614464325793
+        },
+        {
+          "t": 1560,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.639999999999943,
+            1.559999999999939
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.080000000000004,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.986092481133734
+        },
+        {
+          "t": 1660,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.97999999999995,
+            1.659999999999928
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.320000000000022,
+          "sector": 4,
+          "policy": "selected",
+          "choice_angle": -1.117488460188445
+        },
+        {
+          "t": 1540,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.539999999999945,
+            1.5399999999999412
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.0000000000000036,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.3478614464325793
+        },
+        {
+          "t": 1560,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.639999999999943,
+            1.559999999999939
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.080000000000004,
+          "sector": 2,
+          "policy": "selected",
+          "choice_angle": 2.986092481133734
+        },
+        {
+          "t": 1660,
+          "segment": 1,
+          "reason": "boost_toward_more_worn_well",
+          "wear": [
+            5.97999999999995,
+            1.659999999999928
+          ],
+          "fresher_well": 1,
+          "more_worn_well": 0,
+          "target_well": 0,
+          "wear_gap": 4.320000000000022,
+          "sector": 4,
+          "policy": "selected",
+          "choice_angle": -1.117488460188445
+        }
+      ]
+    },
+    "wear_aware_heuristic": {
+      "n_boost_seg2plus": 15,
+      "n_pathological_seg2plus": 0,
+      "n_boost_while_both_floored": 0,
+      "n_boost_toward_more_worn": 0,
+      "pathological_rate_seg2plus": 0.0,
+      "looks_like_bug": false,
+      "per_seed": [
+        {
+          "seed": 0,
+          "full": {
+            "n_boost": 56,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        },
+        {
+          "seed": 1,
+          "full": {
+            "n_boost": 56,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        },
+        {
+          "seed": 2,
+          "full": {
+            "n_boost": 56,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 5,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        }
+      ],
+      "example_flags": []
+    },
+    "never_boost": {
+      "n_boost_seg2plus": 0,
+      "n_pathological_seg2plus": 0,
+      "n_boost_while_both_floored": 0,
+      "n_boost_toward_more_worn": 0,
+      "pathological_rate_seg2plus": 0.0,
+      "looks_like_bug": false,
+      "per_seed": [
+        {
+          "seed": 0,
+          "full": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        },
+        {
+          "seed": 1,
+          "full": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        },
+        {
+          "seed": 2,
+          "full": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          },
+          "inherited_seg2plus": {
+            "n_boost": 0,
+            "n_path": 0,
+            "rate": 0.0
+          }
+        }
+      ],
+      "example_flags": []
+    }
+  },
+  "check4": {
+    "design": "wear_matched_front_vs_back_load",
+    "retired_design_note": "Segment-order reversal [(2),(8)] vs [(8),(2)] confounds order with entry wear (second segment always more worn by construction) and re-measures Check 1; retired as a Stage B trigger.",
+    "front_schedule": [
+      [
+        "boost0",
+        200
+      ],
+      [
+        "ambient",
+        500
+      ]
+    ],
+    "back_schedule": [
+      [
+        "ambient",
+        500
+      ],
+      [
+        "boost0",
+        200
+      ]
+    ],
+    "expected_wear": [
+      1.5,
+      0.7000000000000001
+    ],
+    "n_boost0": 200,
+    "n_ambient": 500,
+    "probe_distance": 4,
+    "probe_horizon": 1500,
+    "policy": "selected",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "placement_angles": {
+      "0": 0.0,
+      "1": 0.7853981633974483,
+      "2": -0.7853981633974483
+    },
+    "placement_note": "Each seed uses a distinct placement angle around the well (D3 convention: east / NE / SE). Seed index alone does not diversify a deterministic simulator+frozen-model pipeline.",
+    "wear_pairs_matched": true,
+    "front_preambles": [
+      {
+        "wear": [
+          1.4999999999999456,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.7000000000000108,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          8,
+          10
+        ],
+        "distance": 2,
+        "placement_angle": 0.0,
+        "schedule": [
+          [
+            "boost0",
+            200
+          ],
+          [
+            "ambient",
+            500
+          ]
+        ]
+      },
+      {
+        "wear": [
+          1.4999999999999456,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.7000000000000108,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          9,
+          9
+        ],
+        "distance": 2,
+        "placement_angle": 0.7853981633974483,
+        "schedule": [
+          [
+            "boost0",
+            200
+          ],
+          [
+            "ambient",
+            500
+          ]
+        ]
+      },
+      {
+        "wear": [
+          1.4999999999999456,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.7000000000000108,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          7,
+          9
+        ],
+        "distance": 2,
+        "placement_angle": -0.7853981633974483,
+        "schedule": [
+          [
+            "boost0",
+            200
+          ],
+          [
+            "ambient",
+            500
+          ]
+        ]
+      }
+    ],
+    "back_preambles": [
+      {
+        "wear": [
+          1.49999999999999,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.700000000000002,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          8,
+          10
+        ],
+        "distance": 2,
+        "placement_angle": 0.0,
+        "schedule": [
+          [
+            "ambient",
+            500
+          ],
+          [
+            "boost0",
+            200
+          ]
+        ]
+      },
+      {
+        "wear": [
+          1.49999999999999,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.700000000000002,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          9,
+          9
+        ],
+        "distance": 2,
+        "placement_angle": 0.7853981633974483,
+        "schedule": [
+          [
+            "ambient",
+            500
+          ],
+          [
+            "boost0",
+            200
+          ]
+        ]
+      },
+      {
+        "wear": [
+          1.49999999999999,
+          0.7000000000000005
+        ],
+        "multipliers": [
+          0.700000000000002,
+          0.8599999999999999
+        ],
+        "total_steps": 700,
+        "n_ambient": 500,
+        "n_boost0": 200,
+        "died_in_preamble": false,
+        "center": [
+          7,
+          9
+        ],
+        "distance": 2,
+        "placement_angle": -0.7853981633974483,
+        "schedule": [
+          [
+            "ambient",
+            500
+          ],
+          [
+            "boost0",
+            200
+          ]
+        ]
+      }
+    ],
+    "per_seed": [
+      {
+        "seed": 0,
+        "placement_angle": 0.0,
+        "preamble_center": [
+          8,
+          10
+        ],
+        "wear_matched": true,
+        "control_front_coh": 0.4094952680097634,
+        "control_back_coh": 0.4094952680097634,
+        "control_front_steps": 511,
+        "control_back_steps": 511,
+        "control_identical": true,
+        "residual_front_coh": 0.6212608844662706,
+        "residual_back_coh": 0.606631735822119,
+        "residual_front_steps": 240,
+        "residual_back_steps": 251,
+        "delta_residual_coh": 0.014629148644151546,
+        "delta_residual_steps": -11.0
+      },
+      {
+        "seed": 1,
+        "placement_angle": 0.7853981633974483,
+        "preamble_center": [
+          9,
+          9
+        ],
+        "wear_matched": true,
+        "control_front_coh": 0.40480428509012295,
+        "control_back_coh": 0.40480428509012295,
+        "control_front_steps": 482,
+        "control_back_steps": 482,
+        "control_identical": true,
+        "residual_front_coh": 0.6168361317695064,
+        "residual_back_coh": 0.6126146367767401,
+        "residual_front_steps": 272,
+        "residual_back_steps": 285,
+        "delta_residual_coh": 0.00422149499276625,
+        "delta_residual_steps": -13.0
+      },
+      {
+        "seed": 2,
+        "placement_angle": -0.7853981633974483,
+        "preamble_center": [
+          7,
+          9
+        ],
+        "wear_matched": true,
+        "control_front_coh": 0.39527213131742817,
+        "control_back_coh": 0.39527213131742817,
+        "control_front_steps": 420,
+        "control_back_steps": 420,
+        "control_identical": true,
+        "residual_front_coh": 0.6282389814525972,
+        "residual_back_coh": 0.6264892797215713,
+        "residual_front_steps": 231,
+        "residual_back_steps": 239,
+        "delta_residual_coh": 0.0017497017310258434,
+        "delta_residual_steps": -8.0
+      }
+    ],
+    "control_role": "wear-only probe is a leakage/sanity control: with matched wear and identical fresh S/R/A, front vs back are bit-identical by construction under a deterministic pipeline. Pass = no hidden state. Fail = apparatus bug.",
+    "control_front": {
+      "mean_coherence": 0.4031905614724382,
+      "mean_steps": 471.0,
+      "survival_rate": 0.0,
+      "mean_tod": 471.0,
+      "per_run_coh": [
+        0.4094952680097634,
+        0.40480428509012295,
+        0.39527213131742817
+      ],
+      "per_run_steps": [
+        511,
+        482,
+        420
+      ]
+    },
+    "control_back": {
+      "mean_coherence": 0.4031905614724382,
+      "mean_steps": 471.0,
+      "survival_rate": 0.0,
+      "mean_tod": 471.0,
+      "per_run_coh": [
+        0.4094952680097634,
+        0.40480428509012295,
+        0.39527213131742817
+      ],
+      "per_run_steps": [
+        511,
+        482,
+        420
+      ]
+    },
+    "control_all_front_back_identical": true,
+    "control_leakage": false,
+    "delta_control_coh": 0.0,
+    "delta_control_steps": 0.0,
+    "wear_only_front": {
+      "mean_coherence": 0.4031905614724382,
+      "mean_steps": 471.0,
+      "survival_rate": 0.0,
+      "mean_tod": 471.0,
+      "per_run_coh": [
+        0.4094952680097634,
+        0.40480428509012295,
+        0.39527213131742817
+      ],
+      "per_run_steps": [
+        511,
+        482,
+        420
+      ]
+    },
+    "wear_only_back": {
+      "mean_coherence": 0.4031905614724382,
+      "mean_steps": 471.0,
+      "survival_rate": 0.0,
+      "mean_tod": 471.0,
+      "per_run_coh": [
+        0.4094952680097634,
+        0.40480428509012295,
+        0.39527213131742817
+      ],
+      "per_run_steps": [
+        511,
+        482,
+        420
+      ]
+    },
+    "delta_wear_only_coh": 0.0,
+    "delta_wear_only_steps": 0.0,
+    "wear_only_diverges": false,
+    "residual_front": {
+      "mean_coherence": 0.622111999229458,
+      "mean_steps": 247.66666666666666,
+      "survival_rate": 0.0,
+      "mean_tod": 247.66666666666666,
+      "per_run_coh": [
+        0.6212608844662706,
+        0.6168361317695064,
+        0.6282389814525972
+      ],
+      "per_run_steps": [
+        240,
+        272,
+        231
+      ]
+    },
+    "residual_back": {
+      "mean_coherence": 0.6152452174401435,
+      "mean_steps": 258.3333333333333,
+      "survival_rate": 0.0,
+      "mean_tod": 258.3333333333333,
+      "per_run_coh": [
+        0.606631735822119,
+        0.6126146367767401,
+        0.6264892797215713
+      ],
+      "per_run_steps": [
+        251,
+        285,
+        239
+      ]
+    },
+    "delta_residual_coh": 0.006866781789314547,
+    "delta_residual_steps": -10.666666666666657,
+    "residual_diverges": true,
+    "residual_diverges_all_seeds": false,
+    "residual_delta_coh_per_seed": [
+      0.014629148644151546,
+      0.00422149499276625,
+      0.0017497017310258434
+    ],
+    "residual_delta_steps_per_seed": [
+      -11.0,
+      -13.0,
+      -8.0
+    ],
+    "residual_sign_consistent": true,
+    "n_labeled_seeds": 3,
+    "n_effective_distinct_front_traj": 3,
+    "sample_diversified": true,
+    "non_markovian_history_supported": false,
+    "order_matters": false,
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v4/results/check4_wear_matched_paths.png"
+  },
+  "device": "cuda",
+  "quick": false,
+  "model": "/home/george-contis/Documents/EmbodiedNCA/v3_5/results/self_model_v3_5.pt"
+}

@@ -1,0 +1,668 @@
+{
+  "stage": "v5",
+  "device": "cuda",
+  "quick": false,
+  "original_wells": [
+    [
+      8,
+      8
+    ],
+    [
+      24,
+      24
+    ]
+  ],
+  "relocated_wells": [
+    [
+      12,
+      20
+    ],
+    [
+      28,
+      4
+    ]
+  ],
+  "model_path": "/home/george-contis/Documents/EmbodiedNCA/v3_5/results/self_model_v3_5.pt",
+  "check1": {
+    "original_wells": [
+      [
+        8,
+        8
+      ],
+      [
+        24,
+        24
+      ]
+    ],
+    "relocated_wells": [
+      [
+        12,
+        20
+      ],
+      [
+        28,
+        4
+      ]
+    ],
+    "inter_well_dist_original": 22.627416997969522,
+    "inter_well_dist_relocated": 22.627416997969522,
+    "original_source": "v3_5_death_aware_val",
+    "original": {
+      "label": "original_val",
+      "n": 1200,
+      "coherence_r_all": 0.9169878959655762,
+      "coherence_mae_all": 0.1213376373052597,
+      "local_R_r_all": 0.8954176306724548,
+      "local_R_mae_all": 0.12134820222854614,
+      "survival_acc": 0.971666693687439,
+      "survival_balanced_acc": 0.9716207101366112,
+      "death_rate_true": 0.29249998927116394,
+      "death_precision": 0.9342465753424658,
+      "death_recall": 0.9715099715099715,
+      "death_f1": 0.9525139664804471,
+      "tp": 341.0,
+      "fp": 24.0,
+      "fn": 10.0,
+      "tn": 825.0,
+      "n_true_death": 351.0,
+      "n_true_survived": 849.0,
+      "by_distance": {
+        "[0,2)": {
+          "n": 480.0,
+          "coherence_r": 0.8687037229537964,
+          "coherence_mae": 0.11364420503377914,
+          "local_R_r": 0.6964117288589478,
+          "local_R_mae": 0.1692739874124527,
+          "survival_balanced_acc": 0.9134902220749088,
+          "death_rate": 0.10208333283662796
+        },
+        "[2,4)": {
+          "n": 57.0,
+          "coherence_r": 0.8169277906417847,
+          "coherence_mae": 0.15273870527744293,
+          "local_R_r": 0.7213131785392761,
+          "local_R_mae": 0.20004625618457794,
+          "survival_balanced_acc": 0.9166666666666667,
+          "death_rate": 0.21052631735801697
+        },
+        "[4,6)": {
+          "n": 30.0,
+          "coherence_r": 0.6877621412277222,
+          "coherence_mae": 0.1889030933380127,
+          "local_R_r": 0.45336103439331055,
+          "local_R_mae": 0.24468879401683807,
+          "survival_balanced_acc": 0.9166666666666667,
+          "death_rate": 0.20000000298023224
+        },
+        "[6,8)": {
+          "n": 42.0,
+          "coherence_r": 0.8481181263923645,
+          "coherence_mae": 0.1123296320438385,
+          "local_R_r": 0.01428467221558094,
+          "local_R_mae": 0.10759669542312622,
+          "survival_balanced_acc": 1.0,
+          "death_rate": 0.1666666716337204
+        },
+        "[8,10)": {
+          "n": 75.0,
+          "coherence_r": 0.918910026550293,
+          "coherence_mae": 0.10467471927404404,
+          "local_R_r": 0.15479153394699097,
+          "local_R_mae": 0.07781485468149185,
+          "survival_balanced_acc": 0.9907407407407407,
+          "death_rate": 0.2800000011920929
+        },
+        "[10,14)": {
+          "n": 508.0,
+          "coherence_r": 0.9319069981575012,
+          "coherence_mae": 0.12255637347698212,
+          "local_R_r": 0.5626623034477234,
+          "local_R_mae": 0.06881029903888702,
+          "survival_balanced_acc": 0.984375,
+          "death_rate": 0.4960629940032959
+        }
+      },
+      "coherence_r_within_bin_mean": 0.845388134320577,
+      "pass_within_bin": true,
+      "pass_survival": true
+    },
+    "relocated": {
+      "label": "relocated",
+      "n": 2500,
+      "coherence_r_all": 0.918823778629303,
+      "coherence_mae_all": 0.13987642526626587,
+      "local_R_r_all": 0.8951422572135925,
+      "local_R_mae_all": 0.09650473296642303,
+      "survival_acc": 0.974399983882904,
+      "survival_balanced_acc": 0.9768631869041705,
+      "death_rate_true": 0.31679999828338623,
+      "death_precision": 0.9385542168674699,
+      "death_recall": 0.9835858585858586,
+      "death_f1": 0.9605425400739827,
+      "tp": 779.0,
+      "fp": 51.0,
+      "fn": 13.0,
+      "tn": 1657.0,
+      "n_true_death": 792.0,
+      "n_true_survived": 1708.0,
+      "by_distance": {
+        "[0,2)": {
+          "n": 652.0,
+          "coherence_r": 0.906958818435669,
+          "coherence_mae": 0.11544104665517807,
+          "local_R_r": 0.7445241808891296,
+          "local_R_mae": 0.14635971188545227,
+          "survival_balanced_acc": 0.9472920696324951,
+          "death_rate": 0.1349693238735199
+        },
+        "[2,4)": {
+          "n": 61.0,
+          "coherence_r": 0.8904069662094116,
+          "coherence_mae": 0.11879613250494003,
+          "local_R_r": 0.8162149786949158,
+          "local_R_mae": 0.1329963058233261,
+          "survival_balanced_acc": 0.9907407407407407,
+          "death_rate": 0.1147540956735611
+        },
+        "[4,6)": {
+          "n": 754.0,
+          "coherence_r": 0.821554958820343,
+          "coherence_mae": 0.125934898853302,
+          "local_R_r": 0.6189181804656982,
+          "local_R_mae": 0.07067906856536865,
+          "survival_balanced_acc": 0.992,
+          "death_rate": 0.6684350371360779
+        },
+        "[6,8)": {
+          "n": 120.0,
+          "coherence_r": 0.7580133080482483,
+          "coherence_mae": 0.16014671325683594,
+          "local_R_r": 0.35827940702438354,
+          "local_R_mae": 0.11436699330806732,
+          "survival_balanced_acc": 0.9957627118644068,
+          "death_rate": 0.01666666753590107
+        },
+        "[8,10)": {
+          "n": 236.0,
+          "coherence_r": 0.8453684449195862,
+          "coherence_mae": 0.1666564643383026,
+          "local_R_r": -0.015433852560818195,
+          "local_R_mae": 0.10174195468425751,
+          "survival_balanced_acc": 0.9522664835164836,
+          "death_rate": 0.11864406615495682
+        },
+        "[10,14)": {
+          "n": 656.0,
+          "coherence_r": 0.883097767829895,
+          "coherence_mae": 0.16728192567825317,
+          "local_R_r": -0.0009025301551446319,
+          "local_R_mae": 0.0689505860209465,
+          "survival_balanced_acc": 0.966687552213868,
+          "death_rate": 0.23170731961727142
+        }
+      },
+      "coherence_r_within_bin_mean": 0.8509000440438589,
+      "pass_within_bin": true,
+      "pass_survival": true
+    },
+    "verdict": "held_comparable",
+    "holds_up": true,
+    "collapsed": false,
+    "pass_within_bin_relocated": true,
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v5/results/check1_calibration_original_vs_relocated.png",
+    "bar_plot": "/home/george-contis/Documents/EmbodiedNCA/v5/results/check1_calibration_metrics_bar.png",
+    "delta_within_bin": 0.00551190972328186,
+    "delta_coh_r": 0.0018358826637268066
+  },
+  "check2": {
+    "wells": [
+      [
+        12,
+        20
+      ],
+      [
+        28,
+        4
+      ]
+    ],
+    "distances": [
+      2,
+      4
+    ],
+    "horizon": 3000,
+    "pre_degrade_boosts": 80,
+    "pre_degrade_wear_preview": [
+      7.999999999999852,
+      1.5999999999999346
+    ],
+    "headlines": {
+      "2": {
+        "selected_mean_coh": 0.5119588313303505,
+        "wear_aware_mean_coh": 0.48503200709819794,
+        "wellward_mean_coh": 0.48503200709819794,
+        "never_boost_mean_coh": 0.3804213131994825,
+        "always_boost_mean_coh": 0.48503200709819794,
+        "delta_sel_minus_wear_aware": 0.026926824232152535,
+        "delta_sel_minus_wellward": 0.026926824232152535,
+        "selected_vs_wear_aware": "beats",
+        "selected_beats_wellward": true
+      },
+      "4": {
+        "selected_mean_coh": 0.38548330647225054,
+        "wear_aware_mean_coh": 0.3347489322351853,
+        "wellward_mean_coh": 0.3456416144004364,
+        "never_boost_mean_coh": 0.28210133866612186,
+        "always_boost_mean_coh": 0.3456416144004364,
+        "delta_sel_minus_wear_aware": 0.05073437423706523,
+        "delta_sel_minus_wellward": 0.03984169207181415,
+        "selected_vs_wear_aware": "beats",
+        "selected_beats_wellward": true
+      }
+    },
+    "results": {
+      "2": {
+        "selected": {
+          "mean_coherence": 0.5119588313303505,
+          "final_coherence": null,
+          "mean_self_mass": 34.094428351165845,
+          "final_self_mass": 0.0,
+          "time_of_death": 331,
+          "n_boosts": 7,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 140,
+          "n_skipped_budget": 4,
+          "n_boost_steps": 140,
+          "final_wear": [
+            11.569999999998123,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "wellward_heuristic": {
+          "mean_coherence": 0.48503200709819794,
+          "final_coherence": null,
+          "mean_self_mass": 33.176662896306084,
+          "final_self_mass": 0.0,
+          "time_of_death": 351,
+          "n_boosts": 12,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 6,
+          "n_boost_steps": 240,
+          "final_wear": [
+            11.969999999998079,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "wear_aware_heuristic": {
+          "mean_coherence": 0.48503200709819794,
+          "final_coherence": null,
+          "mean_self_mass": 33.176662896306084,
+          "final_self_mass": 0.0,
+          "time_of_death": 351,
+          "n_boosts": 12,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 6,
+          "n_boost_steps": 240,
+          "final_wear": [
+            11.969999999998079,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "never_boost": {
+          "mean_coherence": 0.3804213131994825,
+          "final_coherence": null,
+          "mean_self_mass": 28.964616488716374,
+          "final_self_mass": 0.0,
+          "time_of_death": 365,
+          "n_boosts": 0,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 0,
+          "n_boost_steps": 0,
+          "final_wear": [
+            11.009999999998184,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "always_boost": {
+          "mean_coherence": 0.48503200709819794,
+          "final_coherence": null,
+          "mean_self_mass": 33.176662896306084,
+          "final_self_mass": 0.0,
+          "time_of_death": 351,
+          "n_boosts": 12,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 6,
+          "n_boost_steps": 240,
+          "final_wear": [
+            11.969999999998079,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        }
+      },
+      "4": {
+        "selected": {
+          "mean_coherence": 0.38548330647225054,
+          "final_coherence": null,
+          "mean_self_mass": 31.08198403971429,
+          "final_self_mass": 0.0,
+          "time_of_death": 398,
+          "n_boosts": 13,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 131,
+          "n_skipped_budget": 6,
+          "n_boost_steps": 260,
+          "final_wear": [
+            12.04999999999807,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "wellward_heuristic": {
+          "mean_coherence": 0.3456416144004364,
+          "final_coherence": null,
+          "mean_self_mass": 28.829467953942466,
+          "final_self_mass": 0.0,
+          "time_of_death": 445,
+          "n_boosts": 15,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 8,
+          "n_boost_steps": 300,
+          "final_wear": [
+            12.209999999998052,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "wear_aware_heuristic": {
+          "mean_coherence": 0.3347489322351853,
+          "final_coherence": null,
+          "mean_self_mass": 27.837104436600026,
+          "final_self_mass": 0.0,
+          "time_of_death": 461,
+          "n_boosts": 16,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 8,
+          "n_boost_steps": 320,
+          "final_wear": [
+            12.289999999998043,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "never_boost": {
+          "mean_coherence": 0.28210133866612186,
+          "final_coherence": null,
+          "mean_self_mass": 23.471368683133758,
+          "final_self_mass": 0.0,
+          "time_of_death": 531,
+          "n_boosts": 0,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 0,
+          "n_boost_steps": 0,
+          "final_wear": [
+            11.009999999998184,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        },
+        "always_boost": {
+          "mean_coherence": 0.3456416144004364,
+          "final_coherence": null,
+          "mean_self_mass": 28.829467953942466,
+          "final_self_mass": 0.0,
+          "time_of_death": 445,
+          "n_boosts": 15,
+          "n_decisions": 151,
+          "n_skipped_voluntary": 0,
+          "n_skipped_budget": 8,
+          "n_boost_steps": 300,
+          "final_wear": [
+            12.209999999998052,
+            4.609999999999874
+          ],
+          "final_multipliers": [
+            0.4,
+            0.4
+          ],
+          "floor_crossing_t": [
+            0,
+            1390
+          ]
+        }
+      }
+    },
+    "pattern_outcome": {
+      "label": "self_model_wins_or_ties_more",
+      "summary": "Self-model now wins or ties more clearly than on the original layout \u2014 surprising given v2/v3.5; treat as provisional and multi-seed check before taking at face value.",
+      "verdicts_by_dist": {
+        "2": "beats",
+        "4": "beats"
+      },
+      "deltas_by_dist": {
+        "2": 0.026926824232152535,
+        "4": 0.05073437423706523
+      },
+      "worse_margin_dists": [],
+      "better_margin_dists": [
+        2,
+        4
+      ],
+      "scrutiny": {
+        "multiseed_confirmed": true,
+        "deterministic_policies_std0": true,
+        "absolute_selected_holds_near_original": true,
+        "wear_aware_degrades_angular_collapse": true,
+        "note": "selected beats wear_aware on relocated layout (5/5 seeds); selected absolute mean_coh \u2248 original; wear_aware degrades because fresher-well \u2248 nearest-well under 6-sector quantization."
+      }
+    },
+    "original_ref": {
+      "2": {
+        "selected_mean_coh": 0.5124,
+        "wear_aware_mean_coh": 0.5188,
+        "wellward_mean_coh": 0.484,
+        "delta_sel_minus_wear_aware": -0.0064,
+        "selected_vs_wear_aware": "ties"
+      },
+      "4": {
+        "selected_mean_coh": 0.3795,
+        "wear_aware_mean_coh": 0.3915,
+        "wellward_mean_coh": 0.3342,
+        "delta_sel_minus_wear_aware": -0.012,
+        "selected_vs_wear_aware": "loses_to"
+      }
+    },
+    "plot": "/home/george-contis/Documents/EmbodiedNCA/v5/results/check2_policy_comparison_relocated.png",
+    "delta_plot": "/home/george-contis/Documents/EmbodiedNCA/v5/results/check2_delta_original_vs_relocated.png",
+    "multiseed": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "wells": [
+        [
+          12,
+          20
+        ],
+        [
+          28,
+          4
+        ]
+      ],
+      "by_distance": {
+        "2": {
+          "selected_mean": 0.5119588313303505,
+          "selected_std": 0.0,
+          "selected_vals": [
+            0.5119588313303505,
+            0.5119588313303505,
+            0.5119588313303505,
+            0.5119588313303505,
+            0.5119588313303505
+          ],
+          "wear_aware_mean": 0.48503200709819794,
+          "wear_aware_std": 0.0,
+          "wear_aware_vals": [
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794
+          ],
+          "wellward_mean": 0.48503200709819794,
+          "wellward_std": 0.0,
+          "wellward_vals": [
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794,
+            0.48503200709819794
+          ],
+          "delta_mean": 0.026926824232152535,
+          "vs": "beats",
+          "seed_counts": {
+            "sel_better": 5,
+            "wah_better": 0,
+            "tie": 0
+          }
+        },
+        "4": {
+          "selected_mean": 0.38548330647225054,
+          "selected_std": 0.0,
+          "selected_vals": [
+            0.38548330647225054,
+            0.38548330647225054,
+            0.38548330647225054,
+            0.38548330647225054,
+            0.38548330647225054
+          ],
+          "wear_aware_mean": 0.3347489322351853,
+          "wear_aware_std": 0.0,
+          "wear_aware_vals": [
+            0.3347489322351853,
+            0.3347489322351853,
+            0.3347489322351853,
+            0.3347489322351853,
+            0.3347489322351853
+          ],
+          "wellward_mean": 0.3456416144004364,
+          "wellward_std": 0.0,
+          "wellward_vals": [
+            0.3456416144004364,
+            0.3456416144004364,
+            0.3456416144004364,
+            0.3456416144004364,
+            0.3456416144004364
+          ],
+          "delta_mean": 0.05073437423706523,
+          "vs": "beats",
+          "seed_counts": {
+            "sel_better": 5,
+            "wah_better": 0,
+            "tie": 0
+          }
+        }
+      }
+    }
+  },
+  "check3": {
+    "supports_variable_n_wells": false,
+    "n_wells_checkpoint": 2,
+    "conv_in_channels": 36,
+    "forward_two_wells_ok": true,
+    "forward_three_wells_ok": false,
+    "forward_three_wells_error": "RuntimeError: Given groups=1, weight of size [48, 36, 3, 3], expected input[1, 37, 32, 32] to have 36 channels, but got 37 channels instead",
+    "mechanics_variable_n": true,
+    "findings": [
+      "SelfModelV35.n_wells = 2 (fixed at init; checkpoint)",
+      "First Conv2d in_channels=36 (S=32 + R + pert + wear\u00d72 = 36)",
+      "Forward with wear_features [B,2]: OK",
+      "Forward with wear_features [B,3]: FAILS \u2014 RuntimeError: Given groups=1, weight of size [48, 36, 3, 3], expected input[1, 37, 32, 32] to have 36 channels, but got 37 channels instead",
+      "PerWellWearState supports n_wells=3 from len(wells) when wear0 length matches (mechanics are variable-N)",
+      "Self-model input is fixed-size two-well wear channels \u2014 not variable-N",
+      "Training distribution and decision_details logging assume two wells (wear_0/wear_1, well0_floored/well1_floored)",
+      "PerWellWearConfig default wear0=(0,0) requires explicit wear0 for N\u22602; docstring says 'two wells' but loop bodies use len(wells)"
+    ],
+    "verdict": "not_supported",
+    "summary": "self_model_v3_5 does NOT support N\u22602 wells without modification: fixed n_wells=2 wear input channels (Conv2d in_channels=36), forward rejects [B,3] wear (RuntimeError: Given groups=1, weight of size [48, 36, 3, 3], expected input[1, 37, 32, 32] to have 36 channels, but got 37 channels instead). Per-well wear *mechanics* are variable-N, but the frozen self-model's input encoding is pairwise/two-slot. This is a concrete architectural generalization limit \u2014 reported as the finding; no three-well run and no retrain.",
+    "three_well_run_performed": false,
+    "reason_stopped": "architectural fixed n_wells=2; Stage A does not retrain"
+  },
+  "closing": "EmbodiedNCA (v0\u2013v5) built a resource-gated embedded-pattern NCA world (v0), then successively asked whether a learned self-model of future coherence / local resource / survival could earn its complexity over hand-coded controls as geometry (v2), asymmetric per-well wear (v3.5), chained identity (v4), and finally novel well layouts (v5) were introduced. On fixed maps, correctly parameterized heuristics matched or beat selected. On the closing zero-shot relocation test, calibration held_comparable (no coordinate-memorization collapse for prediction), selected beat position-updated heuristics with multi-seed deterministic confirmation \u2014 largely because absolute model performance held while the wear heuristic lost sector resolution when fresher- and nearest-well directions nearly coincided \u2014 and variable well-count (N\u22602) is architecturally not_supported for the frozen self-model. The project's complete answer: this stack produces a useful predictive self-model that transfers across two-well layouts, but does not establish a general consciousness-adjacent controller advantage; hand-coded geometry/wear rules remain competitive whenever their parameters can be set, and fixed two-well input encoding is a hard stop for N>2. Further work (continual learning / decision-driven plasticity) is a different codebase and question, not Stage B of this one."
+}

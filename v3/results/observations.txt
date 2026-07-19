@@ -1,0 +1,163 @@
+# v3 wear-coupled environmental consequence — observations
+device: cuda
+seed: 0
+horizon: 5000
+v0_ckpt: /home/george-contis/Documents/EmbodiedNCA/v0/results/trained_nca.pt
+v2_self_model: /home/george-contis/Documents/EmbodiedNCA/v2/results/self_model_v2.pt
+NOTE: self-model is the existing v2 checkpoint — NOT retrained on wear.
+
+## Operating point (from Check 1 sweep)
+- wear_ambient_rate = 0.001
+- wear_boost_rate = 0.004
+- wear_decay_coeff = 0.2
+- gen_floor_frac = 0.4
+- gen_rate_base = 0.2
+- direct_boost_cost = 0.15
+- closed-form ambient steps to floor ≈ 3000
+- wear at floor = 3.0000
+- boost/ambient ratio = 4.0
+- Selection criterion: t_floor near 0.6×horizon, boost/ambient ~4, floor ~0.4. First-guess parameters were not assumed correct.
+- **Two cost mechanics with different time-courses:**
+  1. **Wear → gen_rate:** ambient (+ boost-accelerated) wear drives `effective_gen_rate` down to the floor by t≈3000 even with *zero* boosting. After every policy has hit the floor, additional wear has **no further effect on gen_rate** (clamped). Greedy policies hit the floor earlier; after max(t_floor_i) all policies share identical egr.
+  2. **Direct R charge (Option A):** paid every time a boost is armed, for the whole horizon — never stops compounding for greedy policies, costs `never_boost` nothing.
+
+## Attention budget (reused from v2 operating point)
+- K=20  regen_rate=0.035  boost_cost=1.0  A_max=1.5  boost_magnitude=0.4
+
+## Check 1 — mechanic sanity (boosting disabled)
+- pass: True
+- monotonic wear: True
+- ambient-exact accrual: True
+- egr never below floor: True
+- egr nonincreasing: True
+- t_floor closed-form: 3000.0
+- t_floor empirical: 3000
+- final_wear=5.000000  final_egr=0.080000  floor=0.080000
+- timescale: ambient wear reaches the gen_rate floor in ~3000 steps. After that time, **wear can no longer differentiate policies on gen_rate** (all at floor).
+- plot: /home/george-contis/Documents/EmbodiedNCA/v3/results/check1_wear_egr.png
+
+## Check 2 — combined mechanics (wear + direct cost)
+- Horizon: 5000 (longer than v2's 2000)
+- Distances: [2, 4, 8]
+- Policies: ['selected', 'random', 'round_robin', 'fixed', 'wellward_heuristic', 'never_boost']
+- fixed = best sector from v2 6-way sweep: {'2': 4, '4': 2, '8': 0}
+- meaningful_coh_delta threshold: 0.01 (underperforms_* flags use this; raw_sign is diagnostics only)
+- dist=2:
+  - selected: mean_coh=0.6594  final_coh=0.6411  mean_mass=31.916  final_mass=25.207  tod=None  boosts=167/251  boost_steps=3340  final_wear=18.3600  final_egr=0.08000  charges=167
+  - random: mean_coh=0.6759  final_coh=0.6520  mean_mass=31.286  final_mass=23.968  tod=None  boosts=167/251  boost_steps=3340  final_wear=18.3600  final_egr=0.08000  charges=167
+  - round_robin: mean_coh=0.6869  final_coh=0.6577  mean_mass=31.479  final_mass=24.306  tod=None  boosts=167/251  boost_steps=3340  final_wear=18.3600  final_egr=0.08000  charges=167
+  - fixed: mean_coh=0.6599  final_coh=0.6411  mean_mass=31.908  final_mass=25.207  tod=None  boosts=167/251  boost_steps=3340  final_wear=18.3600  final_egr=0.08000  charges=167  locked=4
+  - wellward_heuristic: mean_coh=0.6578  final_coh=0.6396  mean_mass=31.686  final_mass=24.966  tod=None  boosts=167/251  boost_steps=3340  final_wear=18.3600  final_egr=0.08000  charges=167
+  - never_boost: mean_coh=0.6944  final_coh=0.6206  mean_mass=45.868  final_mass=21.155  tod=None  boosts=0/251  boost_steps=0  final_wear=5.0000  final_egr=0.08000  charges=0
+  - never_boost higher_coh any greedy: True
+  - never_boost outlives any greedy: False
+  - Δcoh(selected − wellward) = 0.00169  underperforms_wellward=False  (raw_sign=False)
+  - Δcoh(selected − fixed) = -0.00041  underperforms_fixed=False  (raw_sign=True)
+  - Pearson(boost_steps, mean_coh) = -0.6834
+  - pre-floor (t<3000) Δ mean_coh(nb−sel) = 0.0727
+  - post-floor (t≥3000) Δ mean_coh(nb−sel) = -0.0217
+  - t_floor empirical by policy: {'selected': 824, 'random': 824, 'round_robin': 824, 'fixed': 824, 'wellward_heuristic': 824, 'never_boost': 3000}
+- dist=4:
+  - selected: mean_coh=0.4835  final_coh=nan  mean_mass=43.503  final_mass=0.000  tod=899  boosts=30/251  boost_steps=600  final_wear=7.4000  final_egr=0.08000  charges=30
+  - random: mean_coh=0.5021  final_coh=nan  mean_mass=42.734  final_mass=0.000  tod=935  boosts=31/251  boost_steps=620  final_wear=7.4800  final_egr=0.08000  charges=31
+  - round_robin: mean_coh=0.5048  final_coh=nan  mean_mass=42.755  final_mass=0.000  tod=935  boosts=31/251  boost_steps=620  final_wear=7.4800  final_egr=0.08000  charges=31
+  - fixed: mean_coh=0.4884  final_coh=nan  mean_mass=43.551  final_mass=0.000  tod=889  boosts=30/251  boost_steps=600  final_wear=7.4000  final_egr=0.08000  charges=30  locked=2
+  - wellward_heuristic: mean_coh=0.4884  final_coh=nan  mean_mass=43.551  final_mass=0.000  tod=889  boosts=30/251  boost_steps=600  final_wear=7.4000  final_egr=0.08000  charges=30
+  - never_boost: mean_coh=0.5304  final_coh=nan  mean_mass=42.411  final_mass=0.000  tod=2104  boosts=0/251  boost_steps=0  final_wear=5.0000  final_egr=0.08000  charges=0
+  - never_boost higher_coh any greedy: True
+  - never_boost outlives any greedy: True
+  - Δcoh(selected − wellward) = -0.00489  underperforms_wellward=False  (raw_sign=True)
+  - Δcoh(selected − fixed) = -0.00489  underperforms_fixed=False  (raw_sign=True)
+  - Pearson(boost_steps, mean_coh) = -0.8536
+  - pre-floor (t<3000) Δ mean_coh(nb−sel) = 0.0469
+  - post-floor (t≥3000) Δ mean_coh(nb−sel) = nan
+  - t_floor empirical by policy: {'selected': 824, 'random': 824, 'round_robin': 824, 'fixed': 824, 'wellward_heuristic': 824, 'never_boost': 3000}
+- dist=8:
+  - selected: mean_coh=0.2963  final_coh=nan  mean_mass=28.912  final_mass=0.000  tod=488  boosts=17/251  boost_steps=340  final_wear=6.3600  final_egr=0.08000  charges=17
+  - random: mean_coh=0.2942  final_coh=nan  mean_mass=28.552  final_mass=0.000  tod=509  boosts=17/251  boost_steps=340  final_wear=6.3600  final_egr=0.08000  charges=17
+  - round_robin: mean_coh=0.2871  final_coh=nan  mean_mass=28.576  final_mass=0.000  tod=523  boosts=18/251  boost_steps=360  final_wear=6.4400  final_egr=0.08000  charges=18
+  - fixed: mean_coh=0.3089  final_coh=nan  mean_mass=29.676  final_mass=0.000  tod=473  boosts=16/251  boost_steps=320  final_wear=6.2800  final_egr=0.08000  charges=16  locked=0
+  - wellward_heuristic: mean_coh=0.2609  final_coh=nan  mean_mass=27.531  final_mass=0.000  tod=559  boosts=19/251  boost_steps=380  final_wear=6.5200  final_egr=0.08000  charges=19
+  - never_boost: mean_coh=0.1936  final_coh=nan  mean_mass=18.206  final_mass=0.000  tod=939  boosts=0/251  boost_steps=0  final_wear=5.0000  final_egr=0.08000  charges=0
+  - never_boost higher_coh any greedy: False
+  - never_boost outlives any greedy: True
+  - Δcoh(selected − wellward) = 0.03537  underperforms_wellward=False  (raw_sign=False)
+  - Δcoh(selected − fixed) = -0.01265  underperforms_fixed=True  (raw_sign=True)
+  - Pearson(boost_steps, mean_coh) = 0.8648
+  - pre-floor (t<3000) Δ mean_coh(nb−sel) = -0.1027
+  - post-floor (t≥3000) Δ mean_coh(nb−sel) = nan
+  - t_floor empirical by policy: {'selected': 1640, 'random': 1640, 'round_robin': 1560, 'fixed': 1720, 'wellward_heuristic': 1480, 'never_boost': 3000}
+
+### Combined-run frugality (not yet attributed)
+- any_never_boost_matters: True
+- boost_coh_neg_corr_dist_2_4: True
+- **Combined finding:** `never_boost` out-coheres / outlives greedy policies at dist 2/4 under *both* mechanics on. Real, but must not be credited to a single mechanism without Check 2b. Ambient wear alone hits the gen_rate floor by t≈3000; after every policy is floor-clamped, wear can no longer differentiate egr. Pre/post ambient-floor Δ(nb−sel) and the wear-only / direct-only ablations attribute which cost drives the full-horizon mean_coh gap (and longevity).
+
+### selected vs wellward/fixed — design foreclosure, not data
+- any_selected_underperforms_controls (|Δ|≥0.01, clean dist 2/4): False
+- any_selected_underperforms_controls_raw (sign only): True
+- **This arm of Check 2 was foreclosed by the Stage A design choice (global wear), not resolved by the data.** Global wear depends only on *whether* a boost happened, never *where*. No amount of self-model sophistication about sector choice can show up in the wear → gen_rate term. The only location-sensitive cost channel is the direct R charge at the boost cell, and v2 already established that `selected` locks nearly the same sector as wellward/fixed on this map — so no new discrimination is expected. Writing this up as 'selected does not underperform under wear' would misread a structural non-result as an empirical finding. Per-well wear (deferred) is what would open this arm.
+- Boost-count parity (same frequency ⇒ same global wear):
+  - dist=2: selected=167  wellward=167  fixed=167  never_boost=0  sel==wellward? True
+  - dist=4: selected=30  wellward=30  fixed=30  never_boost=0  sel==wellward? True
+  - dist=8: selected=17  wellward=19  fixed=16  never_boost=0  sel==wellward? False
+- plot: /home/george-contis/Documents/EmbodiedNCA/v3/results/check2_policy_comparison.png
+
+## Check 2b — mechanism ablations (attribution)
+- **wear_only:** direct_boost_cost=0; boost still accelerates wear.
+- **direct_only:** wear_boost_rate=0; ambient wear still shared by all policies (gen_rate still degrades to the floor on the ambient schedule); only the Option A R charge differentiates boosters from never_boost.
+- wear_only reproduces nb advantage on clean dist (Δ>0.01)? True
+- direct_only reproduces nb advantage on clean dist (Δ>0.01)? False
+- wear_only avg Δ(nb−sel) clean: 0.04075213791904764
+- direct_only avg Δ(nb−sel) clean: 0.0027132950186218308
+- Per-distance Δ mean_coh (never_boost − selected):
+  - dist=2: combined=0.0350  wear_only=0.0347  direct_only=0.0008
+    wear_only pre/post floor Δ: 0.0726 / -0.0221
+    direct_only pre/post floor Δ: 0.0159 / -0.0218
+    [wear_only] key policies:
+      never_boost: mean_coh=0.6944  tod=None  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.6597  tod=None  boosts=167  final_wear=18.3600  final_egr=0.08000  charges=0
+      wellward_heuristic: mean_coh=0.6578  tod=None  boosts=167  final_wear=18.3600  final_egr=0.08000  charges=0
+    [direct_only] key policies:
+      never_boost: mean_coh=0.6944  tod=None  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.6936  tod=None  boosts=167  final_wear=5.0000  final_egr=0.08000  charges=167
+      wellward_heuristic: mean_coh=0.6918  tod=None  boosts=167  final_wear=5.0000  final_egr=0.08000  charges=167
+  - dist=4: combined=0.0469  wear_only=0.0468  direct_only=0.0046
+    wear_only pre/post floor Δ: 0.0468 / nan
+    direct_only pre/post floor Δ: 0.0046 / nan
+    [wear_only] key policies:
+      never_boost: mean_coh=0.5304  tod=2104  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.4836  tod=899  boosts=30  final_wear=7.4000  final_egr=0.08000  charges=0
+      wellward_heuristic: mean_coh=0.4884  tod=889  boosts=30  final_wear=7.4000  final_egr=0.08000  charges=0
+    [direct_only] key policies:
+      never_boost: mean_coh=0.5304  tod=2104  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.5257  tod=2188  boosts=73  final_wear=5.0000  final_egr=0.08000  charges=73
+      wellward_heuristic: mean_coh=0.5285  tod=2270  boosts=76  final_wear=5.0000  final_egr=0.08000  charges=76
+  - dist=8: combined=-0.1027  wear_only=-0.1027  direct_only=-0.1071
+    wear_only pre/post floor Δ: -0.1027 / nan
+    direct_only pre/post floor Δ: -0.1071 / nan
+    [wear_only] key policies:
+      never_boost: mean_coh=0.1936  tod=939  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.2963  tod=488  boosts=17  final_wear=6.3600  final_egr=0.08000  charges=0
+      wellward_heuristic: mean_coh=0.2608  tod=559  boosts=19  final_wear=6.5200  final_egr=0.08000  charges=0
+    [direct_only] key policies:
+      never_boost: mean_coh=0.1936  tod=939  boosts=0  final_wear=5.0000  final_egr=0.08000  charges=0
+      selected: mean_coh=0.3006  tod=493  boosts=17  final_wear=5.0000  final_egr=0.08000  charges=17
+      wellward_heuristic: mean_coh=0.2651  tod=546  boosts=19  final_wear=5.0000  final_egr=0.08000  charges=19
+- **ATTRIBUTION:** never_boost advantage is reproduced by wear-only (boost-accelerated gen_rate degradation); direct cost alone does not drive it at this OP.
+- ablation plot: /home/george-contis/Documents/EmbodiedNCA/v3/results/check2_ablation_attribution.png
+- wear_only plot: /home/george-contis/Documents/EmbodiedNCA/v3/results/check2_policy_comparison_wear_only.png
+- direct_only plot: /home/george-contis/Documents/EmbodiedNCA/v3/results/check2_policy_comparison_direct_only.png
+
+## Check 3 — consistency
+- pass: True
+- formula_ok (logged egr == wear formula): True
+- mask_ok: True
+- short episode boosts=7  charges=7 (must match)
+- no issues
+
+## Stage A verdict
+Stage A asks whether ignoring long-horizon consequence costs something measurable *before* retraining. Two mechanisms were on; attribution (Check 2b) decides what the headline may claim.
+**Finding (precise):** frugality matters because boost-accelerated **wear** degrades future gen_rate; the direct R charge alone does not reproduce the gap at this OP.
+
+**Next:** wear-aware self-model (v3.5) with a no-boost option is a candidate; per-well wear still needed if the goal is sector-level discrimination.

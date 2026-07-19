@@ -1,0 +1,3011 @@
+{
+  "chosen": {
+    "wear_ambient_rate": 0.001,
+    "wear_boost_rate": 0.004,
+    "wear_decay_coeff": 0.2,
+    "gen_floor_frac": 0.4,
+    "gen_rate_base": 0.2
+  },
+  "rows": [
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 27999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 23999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 20000.0,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 9333.333333333334,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 8000.0,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 6666.666666666667,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 27999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 23999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 20000.0,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 9333.333333333334,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 8000.0,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 6666.666666666667,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 27999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 23999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 20000.0,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 9333.333333333334,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 8000.0,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 6666.666666666667,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 16.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 27999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 23999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 20000.0,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 9333.333333333334,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 8000.0,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 6666.666666666667,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 24.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 27999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 23999.999999999996,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 20000.0,
+      "egr_mid_frac": 0.9375,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 9333.333333333334,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 8000.0,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 6666.666666666667,
+      "egr_mid_frac": 0.8125,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.0005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 40.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666667,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 4000.0,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666667,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 4000.0,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666667,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 4000.0,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 8.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666667,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 4000.0,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 12.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 13999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 11999.999999999998,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 10000.0,
+      "egr_mid_frac": 0.875,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666667,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 4000.0,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.001,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 20.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.3333333333335,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1749.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1499.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1250.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.3333333333335,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1749.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1499.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1250.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.3333333333335,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1749.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1499.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1250.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.3333333333335,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1749.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1499.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1250.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 6999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 5999.999999999999,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 5000.0,
+      "egr_mid_frac": 0.7500000000000001,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 3499.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2999.9999999999995,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.3333333333335,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1749.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1499.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.002,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1250.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 10.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666666,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 3999.9999999999995,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.333333333333,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1999.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1555.5555555555557,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1333.3333333333333,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1111.111111111111,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1166.6666666666665,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 999.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 833.3333333333334,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.6666666666666666,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666666,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 3999.9999999999995,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.333333333333,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1999.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1555.5555555555557,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1333.3333333333333,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1111.111111111111,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1166.6666666666665,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 999.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 833.3333333333334,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.3333333333333333,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666666,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 3999.9999999999995,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.333333333333,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1999.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1555.5555555555557,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1333.3333333333333,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1111.111111111111,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1166.6666666666665,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 999.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 833.3333333333334,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.6666666666666665,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666666,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 3999.9999999999995,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.333333333333,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1999.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1555.5555555555557,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1333.3333333333333,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1111.111111111111,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1166.6666666666665,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 999.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 833.3333333333334,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 4666.666666666666,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 3999.9999999999995,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 3333.3333333333335,
+      "egr_mid_frac": 0.625,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2333.333333333333,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1999.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1666.6666666666667,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1555.5555555555557,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1333.3333333333333,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1111.111111111111,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1166.6666666666665,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 999.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.003,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 833.3333333333334,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 6.666666666666667,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2799.9999999999995,
+      "egr_mid_frac": 0.37500000000000006,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2399.9999999999995,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1399.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1199.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 933.3333333333334,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 800.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 666.6666666666666,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 699.9999999999999,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 599.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.002,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.4,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2799.9999999999995,
+      "egr_mid_frac": 0.37500000000000006,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2399.9999999999995,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1399.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1199.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 933.3333333333334,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 800.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 666.6666666666666,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 699.9999999999999,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 599.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.004,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 0.8,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2799.9999999999995,
+      "egr_mid_frac": 0.37500000000000006,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2399.9999999999995,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1399.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1199.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 933.3333333333334,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 800.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 666.6666666666666,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 699.9999999999999,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 599.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.008,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 1.6,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2799.9999999999995,
+      "egr_mid_frac": 0.37500000000000006,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2399.9999999999995,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1399.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1199.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 933.3333333333334,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 800.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 666.6666666666666,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 699.9999999999999,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 599.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.012,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 2.4,
+      "wear_at_floor": 2.5
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 2799.9999999999995,
+      "egr_mid_frac": 0.37500000000000006,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 13.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 2399.9999999999995,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 11.999999999999998
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.05,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 2000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 10.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 1399.9999999999998,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 6.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 1199.9999999999998,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.999999999999999
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.1,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 1000.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 5.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 933.3333333333334,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.666666666666667
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 800.0,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 4.0
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.15,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 666.6666666666666,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.3333333333333335
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.3,
+      "t_floor_ambient": 699.9999999999999,
+      "egr_mid_frac": 0.3,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 3.4999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.4,
+      "t_floor_ambient": 599.9999999999999,
+      "egr_mid_frac": 0.4000000000000001,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.9999999999999996
+    },
+    {
+      "wear_ambient_rate": 0.005,
+      "wear_boost_rate": 0.02,
+      "wear_decay_coeff": 0.2,
+      "gen_floor_frac": 0.5,
+      "t_floor_ambient": 500.0,
+      "egr_mid_frac": 0.5,
+      "boost_over_ambient": 4.0,
+      "wear_at_floor": 2.5
+    }
+  ]
+}

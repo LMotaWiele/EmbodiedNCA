@@ -1,0 +1,40 @@
+{
+  "d1": {
+    "headline": "3 bin(s) VARIANCE_COLLAPSE, 0 GENUINE_FAILURE",
+    "genuine_failure_bins": [],
+    "variance_collapse_bins": [
+      "[6,8)",
+      "[8,10)",
+      "[10,14)"
+    ],
+    "mid_far_r_err_vs_wear_asym": 0.0098
+  },
+  "d2": {
+    "verdict": "NO_FLOOR_TIMING_SIGNAL",
+    "decoupled_ok": true,
+    "tod": null,
+    "post_floor_life": 3700,
+    "t_first_floor": 300,
+    "vol_skip": 0,
+    "pre_floor_boost_rate": 0.667,
+    "post_all_floor_boost_rate": 0.665
+  },
+  "d3": {
+    "dist2_mean_delta": -0.0083,
+    "dist2_std_delta": 0.0153,
+    "dist2_repro": "seed_sensitive_mixed",
+    "dist4_mean_delta": -0.0397,
+    "dist4_std_delta": 0.0265,
+    "dist4_repro": "reproducibly_loses",
+    "both_act_same_well": 7,
+    "both_act_diff_well": 0,
+    "both_act_same_sector": 1,
+    "both_act_diff_sector": 6
+  },
+  "d4": {
+    "verdict": "STRUCTURALLY_RARE_NOISE_DEATH",
+    "stage_a_noise_death_rate": 0.0016,
+    "late_forks_n": 1498,
+    "late_forks_n_dead": 0
+  }
+}

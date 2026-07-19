@@ -1,0 +1,57 @@
+# v0 sanity-check observations (auto-generated)
+device: cuda
+horizon: 2000
+seed: 0
+
+## Check 1 — break-even near a well
+- Selected rates: gen_rate=0.2, consumption_rate=1.0 (gen0.2_cons1.0)
+- Steady-state local R @ centroid (post burn-in, alive steps): mean=0.6695, stdev=0.0000, range=[0.6695, 0.6696]
+- Final (last-alive) coherence / final mass: 0.9509 / 90.3923110961914
+- **Homeostasis (not a freeze):** steady-state mean_update_magnitude = 0.00684 (final 0.00675). Nonzero and flat ⇒ continuous erosion↔repair equilibrium, not static S.
+- Plot: /home/george-contis/Documents/EmbodiedNCA/v0/results/check1_breakeven.png  (local R and mean-R/cell on dual axes; ‖u‖ panel)
+- Full sweep: results/check1_sweep.json
+
+## Check 2 — distance-dependence
+- Last-alive coherences: {2: 0.7633389234542847, 4: 0.5842364430427551, 8: 0.026282675564289093}
+- Mean alive coherences: {2: 0.7667973771028552, 4: 0.5925938008368938, 8: 0.19425622219843378}
+- Time of death: {2: None, 4: None, 8: 923}
+- Distance effect visible: True
+- Placements: {'2': (8, 10), '4': (8, 12), '8': (8, 16)}
+- Plot: /home/george-contis/Documents/EmbodiedNCA/v0/results/check2_distance.png
+- Note: post-death coherence/localR are NaN (not fabricated).
+
+## Check 3 — gating ablation
+### distance 2
+- Last-alive coherence: {'gated': 0.7633389234542847, 'ungated': 0.9673311114311218, 'zero': 0.0848948135972023}
+- Mean alive coherence: {'gated': 0.7667973771028552, 'ungated': 0.9783984949325455, 'zero': 0.16087702273771443}
+- Time of death: {'gated': None, 'ungated': None, 'zero': None}
+- Σconsumption (full run): {'gated': 13210.771101474762, 'ungated': 18134.311720371246, 'zero': 15795.271874427795}
+- Zero-gate pays for attempted updates: True
+- Ordering ungated ≥ gated ≥ zero: True
+- Center: (8, 10)  plot: /home/george-contis/Documents/EmbodiedNCA/v0/results/check3_gating_d2.png
+### distance 4
+- Last-alive coherence: {'gated': 0.5842364430427551, 'ungated': 0.9673395156860352, 'zero': 0.08466217666864395}
+- Mean alive coherence: {'gated': 0.5925938008368938, 'ungated': 0.9783993768489462, 'zero': 0.16070120378040423}
+- Time of death: {'gated': None, 'ungated': None, 'zero': None}
+- Σconsumption (full run): {'gated': 8310.832038640976, 'ungated': 18150.915244579315, 'zero': 16059.457443237305}
+- Zero-gate pays for attempted updates: True
+- Ordering ungated ≥ gated ≥ zero: True
+- Center: (8, 12)  plot: /home/george-contis/Documents/EmbodiedNCA/v0/results/check3_gating_d4.png
+- Ordering ok at all tested distances: True
+- Zero-gate consumption charged at all distances: True
+
+## Accounting / metric policy (deliberate)
+- Consumption = consumption_rate * ‖update‖_pre-gate per cell. Gate multiplies the residual applied to S, not the bill. gate_mode='zero' still computes update_net and still charges R.
+- DEFAULT_ACTIVATION_THRESHOLD=0.05 (cells counted in self_mass); DEATH_MASS_EPS=1e-6 (alive flag / NaN pattern metrics). Mass cliff ~0.05→0 is the activation threshold dropping the last cell, not DEATH_MASS_EPS=0.05.
+- Once self_mass ≤ DEATH_MASS_EPS, coherence / local_R / distance are NaN; time_of_death is the first such t. total_resource and update/consumption stay defined (world-level). Verified on check2_dist8: alive 1→0 at t=923, zero non-NaN pattern metrics after.
+
+## Interpretive notes (from raw CSV inspection)
+- check2_dist2.csv bit-identical to check3_d2_gated.csv (same gated arm reused; not an independent re-trial).
+- Zero-gate Σconsumption > gated is expected: gated settles to cheap homeostasis (per-step cons ~6.1–6.8); zero never settles so update_net keeps billing moderately large attempts (~7.1–8.1) over the full horizon.
+- Ungated self_mass oscillates (~187–273) with no resource bound — expected unconstrained dynamics, not update_net instability.
+- Check-1 ss local R 0.706→0.670 vs historic: same gen/cons rates; full retrain + re-run after metric-fix pass (CUDA train not bit-stable). Latest results/ numbers are authoritative.
+
+## World-physics notes
+- S diffusion: unopposed erosion when gate is low.
+- R diffusion + soft wells: distance-dependent resource field.
+- Self-maintenance weights trained offline; no external controller at runtime.
