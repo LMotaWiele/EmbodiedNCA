@@ -1,0 +1,86 @@
+# v1 self-model + identity_weight observations (auto-generated)
+device: cpu
+seed: 0
+n_examples: 12000
+horizon: 100  burn_in: 20
+v0_ckpt: /home/george-contis/Documents/EmbodiedNCA/results/v0/trained_nca.pt
+
+## Check 1 — calibration
+- Held-out n=1800 (alive-target subset n=1800)
+- coherence_future Pearson r (pooled) = 0.9527
+- coherence_future MAE (pooled) = 0.0489
+- coherence_future mean within-distance-bin r = 0.8276
+- local_R_future Pearson r = 0.9579  MAE = 0.0730
+- local_R MAE | true<0.2 = 0.0407 (n=637); MAE | true≥0.2 = 0.0907
+- local_R p95/max abs err | true<0.2 = 0.1782 / 0.6447
+- survival accuracy = 1.000  n_dead_in_val=0
+- pass (pooled r >= 0.5): True
+- plot: /home/george-contis/Documents/EmbodiedNCA/results/v1/check1_calibration.png
+- Within-distance-bin coherence + local_R:
+  - dist [0,2): n=274 coh_r=0.7281 coh_MAE=0.0316 local_R_r=0.7728 local_R_MAE=0.0556 true_coh=0.894±0.047 true_lr=0.6767±0.1129
+  - dist [2,4): n=317 coh_r=0.7812 coh_MAE=0.0374 local_R_r=0.8455 local_R_MAE=0.0631 true_coh=0.770±0.070 true_lr=0.8488±0.1440
+  - dist [4,6): n=388 coh_r=0.8094 coh_MAE=0.0575 local_R_r=0.8851 local_R_MAE=0.1126 true_coh=0.590±0.112 true_lr=0.6621±0.3154
+  - dist [6,8): n=386 coh_r=0.8656 coh_MAE=0.0546 local_R_r=0.9304 local_R_MAE=0.1046 true_coh=0.474±0.132 true_lr=0.4278±0.4165
+  - dist [8,10): n=215 coh_r=0.8882 coh_MAE=0.0532 local_R_r=0.9744 local_R_MAE=0.0340 true_coh=0.487±0.122 true_lr=0.1237±0.2880
+  - dist [10,13): n=220 coh_r=0.8933 coh_MAE=0.0575 local_R_r=0.2341 local_R_MAE=0.0219 true_coh=0.475±0.123 true_lr=0.0097±0.0333
+- **FINDING (local_R bin [10,13)):** r collapses (0.234) while MAE is best-in-table (0.022). Classic variance-collapse artifact: true local_R mean±std ≈ 0.0097±0.0333 — near-constant near-zero targets leave little variance for r, not a new model failure.
+- By perturbation type:
+  - null: n=303 coh_r=0.9883 local_R_r=0.9887
+  - nonzero: n=1497 coh_r=0.9483 local_R_r=0.9518
+- **Survival head untested by construction:** burn_in+horizon (20+100=120 steps) is far shorter than v0 death times even at dist=8 (~t=923). Zero training/val examples contain death; not that survival is easy.
+- **FINDING:** mean within-bin r is materially below pooled r — pooled calibration partly reflects basin/regime classification (distance attractors), not only fine-grained within-basin forecast.
+- **FINDING:** local_R low-resource regime has a fat error tail (p95 abs err | true<0.2 = 0.178, max = 0.645) even when mean MAE looks moderate — scatter near true≈0 is not just plotting noise.
+
+## Check 2 — identity_weight structure
+- Probes on active-mass cells (+ sparse bg); full empty-grid probes are OOD relative to training (which prefers pattern support).
+- dist=2 center=(8, 10)  core_mean=0.0689  fringe_mean=0.0505  bg_mean=0.0006  bg_max=0.0870  bg_p95=0.0000  trained_max=0.10145  support_max=0.10145  core/fringe=1.37  core/bg=110.81
+  radial inner/mid/outer = 0.0641/0.0471/0.0492  outer/inner=0.77
+  global_argmax=(9,8) on_support=True  safe_argmax=(9,8) trained_max_equals_bg_max=False
+- dist=4 center=(8, 12)  core_mean=0.0354  fringe_mean=0.0538  bg_mean=0.0008  bg_max=0.1030  bg_p95=0.0000  trained_max=0.10296  support_max=0.09953  core/fringe=0.66  core/bg=43.60
+  radial inner/mid/outer = 0.0365/0.0378/0.0563  outer/inner=1.54
+  global_argmax=(24,8) on_support=False  safe_argmax=(3,17) trained_max_equals_bg_max=True
+- dist=8 center=(8, 16)  core_mean=0.0613  fringe_mean=0.0888  bg_mean=0.0012  bg_max=0.1504  bg_p95=0.0000  trained_max=0.15040  support_max=0.14599  core/fringe=0.69  core/bg=52.50
+  radial inner/mid/outer = 0.0646/0.0800/0.0915  outer/inner=1.42
+  global_argmax=(24,8) on_support=False  safe_argmax=(3,21) trained_max_equals_bg_max=True
+- structure_ok (core mass-quartile mean >> empty bg mean at dist 2,4): True
+- ring_inversion (outer>inner radial weight): {'2': False, '4': True, '8': True}
+- global_argmax_on_background by dist: {'2': False, '4': True, '8': True}
+- raw_argmax_safe: False
+- **FINDING (hard):** at dist=4 and dist=8, `trained_max == bg_max` to float precision — raw `argmax(identity_weight)` is actively wrong. Use support-restricted ranking / validity mask only for cell picking.
+- Background argmax hotspots (not generic 'all bg is bad'):
+  - dist=4: cell=(24,8)  dist→wells={'well_8_8': 16.0, 'well_24_24': 16.0}  equidistant_saddle=True  bg_p95=0.0
+  - dist=8: cell=(24,8)  dist→wells={'well_8_8': 16.0, 'well_24_24': 16.0}  equidistant_saddle=True  bg_p95=0.0
+- **FINDING (mechanism):** the bg failure is the *same cell* (24,8) at every failing distance, not a random OOD draw. Wells sit at [(8, 8), (24, 24)]; (24,8) is equidistant to both (a multi-well layout saddle). Sparse bg probe grid always samples this coordinate. Training only places patterns near a *single* well at bounded distance — inter-well saddles are unseen (S≈0, layout-specific site). This is more tractable than 'background is unreliable everywhere.'
+- **bg_p95 (own line):** ≈0.0 at tested distances means ≥95% of background probes score ~zero. Failure is rare and localized (hot spots / saddles), not a broadly unreliable background. Do not read bg_max alone as 'all background is bad.'
+- **FINDING (maps):** at dist≥4 the weight map often shows a dark hole at the pattern center with a brighter ring at the boundary — structured core/fringe inversion. Dynamics story untested.
+- plot: /home/george-contis/Documents/EmbodiedNCA/results/v1/check2_identity_weight.png
+
+## Check 3 — baselines (untrained + naive ‖S‖)
+- Untrained network re-initialized each run (seed=17 this report). Cosine(trained, untrained) is **init-dependent** and will move across reports even with identical trained weights — same discipline as v0 check-1 number shifts: if this metric changes between write-ups, the cause is fresh untrained init, not a silent change to the trained model. Earlier report had e.g. 0.15/0.13/nan; this seed yields different values. Prefer naive-‖S‖ residual (stable) over untrained cosine for claims.
+- dist=2 cos(trained,untrained)=0.8288655877113342  cos(trained,naive‖S‖)=0.751  resid_frac_after_naive=0.632  untrained_max=0.0000  untrained_std=3.68e-06  untrained_constant=False  nan_reason=None
+- dist=4 cos(trained,untrained)=0.7887252569198608  cos(trained,naive‖S‖)=0.504  resid_frac_after_naive=0.842  untrained_max=0.0000  untrained_std=3.72e-06  untrained_constant=False  nan_reason=None
+- dist=8 cos(trained,untrained)=0.7852410078048706  cos(trained,naive‖S‖)=0.579  resid_frac_after_naive=0.795  untrained_max=0.0000  untrained_std=3.62e-06  untrained_constant=False  nan_reason=None
+- ablation_ok (stricter vs untrained): True
+- residual_beyond_naive_ok (resid_frac>0.3 at dist 2,4): True
+- When untrained cosine is NaN: baseline map is constant / zero-variance at that init, so cosine is undefined — different from structured noise. Naive sensitivity∝‖S‖ residual_frac is the stronger, stable null.
+- plot: /home/george-contis/Documents/EmbodiedNCA/results/v1/check2_check3_identity_weight.png
+
+## Follow-up — equidistant-locus false-signal probe
+- Wells [(8, 8), (24, 24)]. Equidistant locus samples: [(24, 8), (8, 24)] + mid [(16, 16)] (all have x+y=32 on this layout = perpendicular bisector). Corners [(0, 0), (31, 31), (0, 31), (31, 0)].
+- For wells (8,8) and (24,24), equidistant locus is x+y=32; includes (24,8), (8,24), (16,16). Runtime rule: |d_A-d_B|<eps.
+- dist=2: locus_weights={'24,8': 0.08695483207702637, '8,24': 0.08694535493850708, '16,16': 0.07763797044754028}  pattern_peak=0.10133  locus/pattern=0.86  locus_beats_pattern=False  corner_max=0.01188  locus/corner=7.32
+- dist=4: locus_weights={'24,8': 0.10296261310577393, '8,24': 0.10188296437263489, '16,16': 0.09524887800216675}  pattern_peak=0.04350  locus/pattern=2.37  locus_beats_pattern=True  corner_max=0.01111  locus/corner=9.27
+- dist=8: locus_weights={'24,8': 0.15039879083633423, '8,24': 0.12694323062896729, '16,16': 0.1255112886428833}  pattern_peak=0.03618  locus/pattern=4.16  locus_beats_pattern=True  corner_max=0.01229  locus/corner=12.23
+- confirmed vs corners: True
+- confirmed locus exceeds pattern peak at dist≥4: True
+- plot: /home/george-contis/Documents/EmbodiedNCA/results/v1/check_saddle_hotspots.png
+- **HEADLINE:** at dist=4 and dist=8 the equidistant-locus weight exceeds the pattern's own peak (≈2.4× and ≈4.2×) — the map's highest confidence claim is a *false signal larger than the real signal*, not merely larger than boring background. dist=2 still pattern-wins (consistent with trained_max_equals_bg_max=False there).
+- **Geometry:** (24,8), (8,24), (16,16) are one locus (x+y=32 / equidistant to both wells), not three special cases. Generalize with `|d_well_A − d_well_B| < eps` from runtime well positions — not hardcoded coordinates (survives well relocation).
+- **Two untrustworthy regimes:** (1) no-signal bg far from wells (weight≈0, bg_p95=0 — benign); (2) false-signal equidistant boundary (weight high, confidently wrong — dangerous for resource allocation). Mass-only masks exclude (1) but not (2) on full-grid maps; validity_mask must also exclude the equidistant boundary when wells are known.
+
+## Policy notes
+- Self-model is read-only: never writes S/R; v0 step/physics untouched.
+- identity_weight[y,x] = max(0, pred_coh(null) - pred_coh(probe@y,x)).
+- **Operational API (v2 inherit):** `validity_mask(S, wells=...)` = support (‖S‖>τ) AND NOT equidistant boundary (|d_i−d_j|<eps over well pairs). `argmax_identity_weight(w, S, wells=...)` only. Never raw full-grid argmax.
+- Dead futures use NaN→0 training targets + explicit survival head; with current H, death never occurs in data — survival head is deferred.
+- No action selection, RL, or confidence channels in v1.
